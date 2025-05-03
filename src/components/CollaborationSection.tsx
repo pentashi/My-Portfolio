@@ -39,9 +39,17 @@ const CollaborationSection: React.FC = () => {
             </div>
           </div>
           
-          <Button size="lg" className="bg-primary hover:bg-primary/80 cta-hover">
-            Let's Build Something <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <Button
+  size="lg"
+  className="bg-primary hover:bg-primary/80 cta-hover"
+  onClick={() => {
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  }}
+>
+  Let's Build Something <ArrowRight className="ml-2 h-4 w-4" />
+</Button>
+
         </div>
       </div>
     </section>

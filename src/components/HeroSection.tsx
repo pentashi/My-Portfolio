@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
     <section className="min-h-screen flex flex-col justify-center px-4 py-20 md:py-32">
       <div className="max-w-5xl mx-auto w-full animate-fade-in">
         <div className="mb-6">
-          <h2 className="text-primary font-bold text-lg md:text-xl mb-3">MBONGWE BRANDON EGB</h2>
+          <h2 className="text-primary font-bold text-lg md:text-xl mb-3">MBONGWE BRANDON EGBE</h2>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
             Building <span className="text-gradient">Real-Time Tools</span> for a Better Digital Life
           </h1>

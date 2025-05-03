@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Youtube } from 'lucide-react';
+import { SiGithub, SiLinkedin, SiLeetcode } from 'react-icons/si';
 
 interface SocialLinksProps {
   size?: 'sm' | 'md' | 'lg';
@@ -11,25 +10,25 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ size = 'md' }) => {
   const socialLinks = [
     {
       name: 'GitHub',
-      url: 'https://github.com',
-      icon: <Github />,
+      url: 'https://github.com/pentashi',
+      icon: <SiGithub />,
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com',
-      icon: <Linkedin />,
+      url: 'https://www.linkedin.com/in/achapi-pentashi',
+      icon: <SiLinkedin />,
     },
     {
-      name: 'YouTube',
-      url: 'https://youtube.com/AchapiFitness',
-      icon: <Youtube />,
+      name: 'LeetCode',
+      url: 'https://leetcode.com/u/vnGwGTsjUy/',
+      icon: <SiLeetcode />,
     },
   ];
-  
+
   const buttonSize = {
-    'sm': { button: 'w-8 h-8', icon: 'h-4 w-4' },
-    'md': { button: 'w-10 h-10', icon: 'h-5 w-5' },
-    'lg': { button: 'w-12 h-12', icon: 'h-6 w-6' },
+    sm: { button: 'w-8 h-8', icon: 'h-4 w-4 text-lg' },
+    md: { button: 'w-10 h-10', icon: 'h-5 w-5 text-xl' },
+    lg: { button: 'w-12 h-12', icon: 'h-6 w-6 text-2xl' },
   }[size];
 
   return (

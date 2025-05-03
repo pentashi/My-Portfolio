@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
         <a href="#" className="font-bold text-xl">
-          MB
+          MBE
         </a>
 
         {/* Desktop navigation */}
