@@ -54,7 +54,6 @@ const ContactSection: React.FC = () => {
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-2">Get In Touch</h2>
         <div className="h-1 w-20 bg-primary mx-auto mb-8"></div>
-
         <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
           Ready to collaborate or want to know more about my projects?
           I'm always open to discussing new opportunities and ideas.
