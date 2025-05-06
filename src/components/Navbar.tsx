@@ -49,9 +49,9 @@ const Navbar: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <Button className="bg-primary hover:bg-primary/80 cta-hover">
+          {/* <Button className="bg-primary hover:bg-primary/80 cta-hover">
             Contact
-          </Button>
+          </Button> */}
         </nav>
 
         {/* Mobile menu toggle */}
@@ -70,28 +70,30 @@ const Navbar: React.FC = () => {
 
       {/* Mobile navigation */}
       <div 
-        className={`md:hidden fixed inset-0 z-40 bg-background backdrop-blur-lg transition-transform duration-300 transform ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
+  className={`md:hidden fixed inset-0 z-[999] bg-[#0a0a0a] transition-transform duration-300 transform ${
+    isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+  }`}
+>
+
         <div className="h-full flex flex-col pt-20 px-8">
           <nav className="flex flex-col gap-6">
             {navLinks.map((link) => (
               <a 
                 key={link.name}
                 href={link.href}
-                className="text-xl hover:text-primary transition-colors"
+                className="text-white text-xl hover:text-primary transition-colors"
+
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
               </a>
             ))}
-            <Button 
+            {/* <Button 
               className="bg-primary hover:bg-primary/80 mt-4"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
-            </Button>
+            </Button> */}
           </nav>
         </div>
       </div>

@@ -20,38 +20,38 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "#",
       isReverseLayout: false
     },
-    {
-      title: "QuickChat",
-      emoji: "🧨",
-      description: "A feature-rich messaging app focused on speed, security, and usability. Built with Socket.IO, Supabase Auth + DB, and a stunning Material UI.",
-      features: [
-        "Real-time messaging",
-        "Presence, typing indicators, read receipts",
-        "Media sharing and encrypted sessions",
-        "Web & mobile-ready (React + React Native)"
-      ],
-      tags: ["React", "Socket.IO", "Supabase", "Material UI", "React Native"],
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      liveUrl: "#",
-      githubUrl: "#",
-      isReverseLayout: true
-    },
-    {
-      title: "OnePercent",
-      emoji: "🔥",
-      description: "Track daily streaks, avoid distractions, and rewire your brain to beat lust and scrolling addiction. Monk mode in a web app.",
-      features: [
-        "Habit dashboard with streak tracking",
-        "Daily journal + progress charts",
-        "Built to help users reach top 1% discipline",
-        "Focus timers and distraction blockers"
-      ],
-      tags: ["React", "MongoDB", "Express", "Node.js", "Recharts"],
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-      liveUrl: "#",
-      githubUrl: "#",
-      isReverseLayout: false
-    }
+    // {
+    //   title: "QuickChat",
+    //   emoji: "🧨",
+    //   description: "A feature-rich messaging app focused on speed, security, and usability. Built with Socket.IO, Supabase Auth + DB, and a stunning Material UI.",
+    //   features: [
+    //     "Real-time messaging",
+    //     "Presence, typing indicators, read receipts",
+    //     "Media sharing and encrypted sessions",
+    //     "Web & mobile-ready (React + React Native)"
+    //   ],
+    //   tags: ["React", "Socket.IO", "Supabase", "Material UI", "React Native"],
+    //   image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    //   liveUrl: "#",
+    //   githubUrl: "#",
+    //   isReverseLayout: true
+    // },
+    // {
+    //   title: "OnePercent",
+    //   emoji: "🔥",
+    //   description: "Track daily streaks, avoid distractions, and rewire your brain to beat lust and scrolling addiction. Monk mode in a web app.",
+    //   features: [
+    //     "Habit dashboard with streak tracking",
+    //     "Daily journal + progress charts",
+    //     "Built to help users reach top 1% discipline",
+    //     "Focus timers and distraction blockers"
+    //   ],
+    //   tags: ["React", "MongoDB", "Express", "Node.js", "Recharts"],
+    //   image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+    //   liveUrl: "#",
+    //   githubUrl: "#",
+    //   isReverseLayout: false
+    // }
   ];
 
   return (
