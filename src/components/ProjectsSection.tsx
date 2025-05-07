@@ -15,11 +15,27 @@ const ProjectsSection: React.FC = () => {
         "Notifications + smart UX"
       ],
       tags: ["React", "Supabase", "TailwindCSS", "Zustand"],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      liveUrl: "#",
-      githubUrl: "#",
+      image: "https://i.imgur.com/30gAlTp.png ",
+      liveUrl: "https://task-wizard-unleashed-e388a3cf.vercel.app/",
+      githubUrl: "https://github.com/pentashi/task-wizard-unleashed-e388a3cf",
       isReverseLayout: false
     },
+    {
+      title: "ShopSmart",
+      emoji: "🛒",
+      description: "A modern e-commerce platform built for speed and scalability. Real-time inventory, secure checkout, and smooth user experience.",
+      features: [
+        "Product listings with filtering & sorting",
+        "User authentication and order history",
+        "Cart, checkout & payment integration",
+        "Responsive design with modern UI"
+      ],
+      tags: ["React", "Supabase", "TailwindCSS", "Stripe"],
+      image: "https://i.imgur.com/eteYXgS.png",
+      liveUrl: "https://ecommerce-omega-swart-83.vercel.app/",
+      githubUrl: "https://github.com/pentashi/ecommerce-",
+      isReverseLayout: true
+    }
     // {
     //   title: "QuickChat",
     //   emoji: "🧨",

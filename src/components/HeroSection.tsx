@@ -18,11 +18,11 @@ const HeroSection: React.FC = () => {
           </p>
           <div className="flex flex-wrap gap-4">
             <Button size="lg" className="bg-primary text-white hover:bg-primary/80 cta-hover">
-              View My Work
+            <a href="#projects">View My Work</a>
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/5">
-              Let's Build Together
+            <a href="#contact">Let’s Build Together</a>
             </Button>
           </div>
         </div>
