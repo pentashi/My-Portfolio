@@ -58,18 +58,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               ))}
             </div>
           </CardContent>
-          <CardFooter className="flex gap-4">
-            {liveUrl && (
-              <Button className="bg-primary hover:bg-primary/80 cta-hover">
-                Live Demo <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            )}
-            {githubUrl && (
-              <Button variant="outline" className="border-white/20 hover:bg-white/5">
-                GitHub Repo
-              </Button>
-            )}
-          </CardFooter>
+         <CardFooter className="flex gap-4">
+  {liveUrl && (
+    <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+      <Button className="bg-primary hover:bg-primary/80 cta-hover">
+        Live Demo <ArrowRight className="ml-2 h-4 w-4" />
+      </Button>
+    </a>
+  )}
+  {githubUrl && (
+    <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+      <Button variant="outline" className="border-white/20 hover:bg-white/5">
+        GitHub Repo
+      </Button>
+    </a>
+  )}
+</CardFooter>
+
         </div>
         
         <div className={`order-1 ${isReverseLayout ? 'lg:order-2' : 'lg:order-1'} p-6`}>

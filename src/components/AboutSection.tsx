@@ -70,7 +70,7 @@ const AboutSection: React.FC = () => {
             </div>
 
             <h3 className="text-xl font-bold mb-3 text-gradient mt-6">Education</h3>
-            <p className="text-gray-300">BTEC in Software Engineering - <span className="font-bold">Institut Universitaire de la Côte (IUC), Cameroon</span> (2021 – 2024)</p>
+            <p className="text-gray-300">BTECH in Software Engineering - <span className="font-bold">Institut Universitaire de la Côte (IUC), Cameroon</span> (2021 – 2024)</p>
             
             <h3 className="text-xl font-bold mb-3 text-gradient mt-6">Certifications</h3>
             <p className="text-gray-300">HackerRank Software Engineer Certification</p>
