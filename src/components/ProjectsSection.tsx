@@ -32,7 +32,7 @@ const ProjectsSection: React.FC = () => {
       ],
       tags: ["React", "Supabase", "TailwindCSS", "Stripe"],
       image: "https://i.imgur.com/eteYXgS.png",
-      liveUrl: "https://ecommerce-phi-jet-67.vercel.app/",
+      liveUrl: "https://ecommerce-phi-jet-67.vercel.app/login",
       githubUrl: "https://github.com/pentashi/ecommerce-",
       isReverseLayout: true
     }
