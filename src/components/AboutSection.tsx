@@ -17,7 +17,7 @@ const AboutSection: React.FC = () => {
               real-time web applications, Supabase, and the MERN stack.
             </p>
             <p className="text-lg mb-4 text-gray-300">
-              My mission is to build meaningful, high-quality products—especially in chat, productivity, 
+              My mission is to build meaningful, high-quality products especially in chat, productivity, 
               and lifestyle spaces that help users live better digital lives.
             </p>
             <p className="text-lg mb-6 text-gray-300">
