@@ -52,7 +52,7 @@ const ProjectsSection: React.FC = () => {
       image: "https://i.imgur.com/eteYXgS.png",
       liveUrl: "https://ecommerce-phi-jet-67.vercel.app/login",
       githubUrl: "https://github.com/pentashi/ecommerce-",
-      isReverseLayout: true
+      isReverseLayout: false
     }
     // {
     //   title: "QuickChat",
