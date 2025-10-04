@@ -4,6 +4,24 @@ import ProjectCard from './ProjectCard';
 
 const ProjectsSection: React.FC = () => {
   const projects = [
+  {
+  title: "Expense Tracker",
+  emoji: "💰",
+  description: "A smart expense management system built with Lumen (Laravel) backend and React frontend. Tracks income, expenses, budgets, and visualizes data with interactive charts.",
+  features: [
+    "JWT-secured API built with Lumen",
+    "Real-time expense tracking and summaries",
+    "Category-based analytics and charts",
+    "Multi-language support with i18next",
+    "Modern UI with PrimeReact and Tailwind styling"
+  ],
+  tags: ["React", "Lumen", "JWT Auth", "Chart.js", "PrimeReact"],
+  image: "https://i.ibb.co/4wT1G4km/expense-tracker.png", 
+  liveUrl: "https://expense-tracker-nine-zeta-11.vercel.app/",
+  githubUrl: "https://github.com/pentashi/expense-tracker",
+  isReverseLayout: false
+}
+,
     {
       title: "Task Wizard",
       emoji: "🧙‍♂️",
