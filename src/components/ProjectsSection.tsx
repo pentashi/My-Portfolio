@@ -6,7 +6,7 @@ const ProjectsSection: React.FC = () => {
    {
   title: "AI Fitness Coach (Beta)",
   emoji: "💪",
-  description: "An AI-powered fitness assistant currently in **Beta**, generating personalized workout plans and providing real-time coaching through a chatbot. Live features include onboarding, custom plan generation, and interactive chat; live tracking, progress monitoring, and physique rating are coming soon.",
+  description: "An AI-powered fitness assistant currently in Beta, generating personalized workout plans and providing real-time coaching through a chatbot. Live features include onboarding, custom plan generation, and interactive chat; live tracking, progress monitoring, and physique rating are coming soon.",
   features: [
     "Beta version live with onboarding & AI-generated workout plans",
     "AI chatbot for fitness coaching and habit guidance",
@@ -16,7 +16,7 @@ const ProjectsSection: React.FC = () => {
     "Future updates: live tracking, progress monitoring, and physique rating"
   ],
   tags: ["React", "Firebase", "Groq", "TailwindCSS"],
-  image: "https://i.imgur.com/FitAIImage.png", // Replace with actual screenshot
+  image: "https://i.ibb.co/4g19h9ff/Untitled-design-4.png", 
   liveUrl: "https://ai-fitness-coach.vercel.app/",
   githubUrl: "https://github.com/pentashi/ai-fitness-coach",
   isReverseLayout: false
@@ -37,7 +37,7 @@ const ProjectsSection: React.FC = () => {
         "CRUD operations for user management with secure password hashing (bcrypt)"
       ],
       tags: ["NestJS", "MongoDB", "Socket.IO", "JWT", "Jest", "Firebase", "Swagger"],
-      image: "https://i.imgur.com/CargoLinkImage.png", // Replace with actual screenshot
+      image: "https://i.ibb.co/spXh2HRg/cargolinkdoc.png", 
       liveUrl: "https://cargolink-backend.vercel.app/",
       githubUrl: "https://github.com/pentashi/amunir-backend",
       isReverseLayout: true
