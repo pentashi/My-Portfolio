@@ -3,25 +3,24 @@ import ProjectCard from './ProjectCard';
 
 const ProjectsSection: React.FC = () => {
   const projects = [
-   {
-  title: "AI Fitness Coach (Beta)",
-  emoji: "💪",
-  description: "An AI-powered fitness assistant currently in Beta, generating personalized workout plans and providing real-time coaching through a chatbot. Live features include onboarding, custom plan generation, and interactive chat; live tracking, progress monitoring, and physique rating are coming soon.",
-  features: [
-    "Beta version live with onboarding & AI-generated workout plans",
-    "AI chatbot for fitness coaching and habit guidance",
-    "Dynamic exercise suggestions adapting to user goals and environment",
-    "Real-time notifications and reminders",
-    "Built with React frontend and Firebase backend, with AI logic powered by Groq",
-    "Future updates: live tracking, progress monitoring, and physique rating"
-  ],
-  tags: ["React", "Firebase", "Groq", "TailwindCSS"],
-  image: "https://i.ibb.co/4g19h9ff/Untitled-design-4.png", 
-  liveUrl: "https://ai-fitness-coach.vercel.app/",
-  githubUrl: "https://github.com/pentashi/ai-fitness-coach",
-  isReverseLayout: false
-}
-,
+    {
+      title: "AI Fitness Coach (Beta)",
+      emoji: "💪",
+      description: "An AI-powered fitness assistant currently in Beta, generating personalized workout plans and providing real-time coaching through a chatbot. Live features include onboarding, custom plan generation, and interactive chat; live tracking, progress monitoring, and physique rating are coming soon.",
+      features: [
+        "Beta version live with onboarding & AI-generated workout plans",
+        "AI chatbot for fitness coaching and habit guidance",
+        "Dynamic exercise suggestions adapting to user goals and environment",
+        "Real-time notifications and reminders",
+        "Built with React frontend and Firebase backend, with AI logic powered by Groq",
+        "Future updates: live tracking, progress monitoring, and physique rating"
+      ],
+      tags: ["React", "Firebase", "Groq", "TailwindCSS"],
+      image: "https://i.ibb.co/4g19h9ff/Untitled-design-4.png", 
+      liveUrl: "https://ai-fitness-coach.vercel.app/",
+      githubUrl: "https://github.com/pentashi/ai-fitness-coach",
+      isReverseLayout: true
+    },
     {
       title: "CargoLink / Amunir Backend",
       emoji: "🚛",
@@ -56,7 +55,7 @@ const ProjectsSection: React.FC = () => {
       image: "https://i.imgur.com/eteYXgS.png",
       liveUrl: "https://ecommerce-phi-jet-67.vercel.app/login",
       githubUrl: "https://github.com/pentashi/ecommerce-",
-      isReverseLayout: false
+      isReverseLayout: true
     },
     {
       title: "Task Wizard",
@@ -89,7 +88,7 @@ const ProjectsSection: React.FC = () => {
       image: "https://i.ibb.co/4wT1G4km/expense-tracker.png",
       liveUrl: "https://expense-tracker-nine-zeta-11.vercel.app/",
       githubUrl: "https://github.com/pentashi/expense-tracker",
-      isReverseLayout: false
+      isReverseLayout: true
     }
   ];
 
@@ -112,6 +111,8 @@ const ProjectsSection: React.FC = () => {
               liveUrl={project.liveUrl}
               githubUrl={project.githubUrl}
               isReverseLayout={project.isReverseLayout}
+              imageClassName="w-full max-w-md h-64 object-cover rounded-lg" // ✅ fixed image sizing
+              cardClassName="glass-card hover-scale p-4 text-center rounded-lg flex flex-col items-center justify-between min-h-[500px]" // ✅ standardized card height
             />
           ))}
         </div>
