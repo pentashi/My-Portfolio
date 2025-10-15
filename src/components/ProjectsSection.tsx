@@ -1,42 +1,46 @@
-
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
 const ProjectsSection: React.FC = () => {
   const projects = [
-  {
-  title: "Expense Tracker",
-  emoji: "💰",
-  description: "A smart expense management system built with Lumen (Laravel) backend and React frontend. Tracks income, expenses, budgets, and visualizes data with interactive charts.",
+   {
+  title: "AI Fitness Coach (Beta)",
+  emoji: "💪",
+  description: "An AI-powered fitness assistant currently in **Beta**, generating personalized workout plans and providing real-time coaching through a chatbot. Live features include onboarding, custom plan generation, and interactive chat; live tracking, progress monitoring, and physique rating are coming soon.",
   features: [
-    "JWT-secured API built with Lumen",
-    "Real-time expense tracking and summaries",
-    "Category-based analytics and charts",
-    "Multi-language support with i18next",
-    "Modern UI with PrimeReact and Tailwind styling"
+    "Beta version live with onboarding & AI-generated workout plans",
+    "AI chatbot for fitness coaching and habit guidance",
+    "Dynamic exercise suggestions adapting to user goals and environment",
+    "Real-time notifications and reminders",
+    "Built with React frontend and Firebase backend, with AI logic powered by Groq",
+    "Future updates: live tracking, progress monitoring, and physique rating"
   ],
-  tags: ["React", "Lumen", "JWT Auth", "Chart.js", "PrimeReact"],
-  image: "https://i.ibb.co/4wT1G4km/expense-tracker.png", 
-  liveUrl: "https://expense-tracker-nine-zeta-11.vercel.app/",
-  githubUrl: "https://github.com/pentashi/expense-tracker",
+  tags: ["React", "Firebase", "Groq", "TailwindCSS"],
+  image: "https://i.imgur.com/FitAIImage.png", // Replace with actual screenshot
+  liveUrl: "https://ai-fitness-coach.vercel.app/",
+  githubUrl: "https://github.com/pentashi/ai-fitness-coach",
   isReverseLayout: false
 }
 ,
     {
-      title: "Task Wizard",
-      emoji: "🧙‍♂️",
-      description: "A productivity app powered by Supabase. Real-time sync, smart notifications, authentication, and advanced user control via RLS.",
+      title: "CargoLink / Amunir Backend",
+      emoji: "🚛",
+      description: "A robust backend API powering Amunir, a logistics platform designed to streamline importation and delivery for African entrepreneurs. Built with NestJS, MongoDB, and Socket.IO, supporting real-time order tracking, driver dispatch, and analytics while maintaining secure authentication and role-based access.",
       features: [
-        "Real-time database updates",
-        "Email login/magic link auth",
-        "Fully responsive and clean UI",
-        "Notifications + smart UX"
+        "RESTful API architecture using NestJS with modular service/controller design",
+        "JWT authentication and role-based access control",
+        "Real-time order status updates via Socket.IO",
+        "Unit-tested endpoints using Jest for reliability and maintainability",
+        "Analytics for shipments, performance tracking, and operational insights",
+        "Firebase-powered notifications for instant delivery updates",
+        "Swagger API documentation for developer collaboration",
+        "CRUD operations for user management with secure password hashing (bcrypt)"
       ],
-      tags: ["React", "Supabase", "TailwindCSS", "Zustand"],
-      image: "https://i.imgur.com/30gAlTp.png ",
-      liveUrl: "https://task-wizard-unleashed-e388a3cf.vercel.app/",
-      githubUrl: "https://github.com/pentashi/task-wizard-unleashed-e388a3cf",
-      isReverseLayout: false
+      tags: ["NestJS", "MongoDB", "Socket.IO", "JWT", "Jest", "Firebase", "Swagger"],
+      image: "https://i.imgur.com/CargoLinkImage.png", // Replace with actual screenshot
+      liveUrl: "https://cargolink-backend.vercel.app/",
+      githubUrl: "https://github.com/pentashi/amunir-backend",
+      isReverseLayout: true
     },
     {
       title: "ShopSmart",
@@ -53,39 +57,40 @@ const ProjectsSection: React.FC = () => {
       liveUrl: "https://ecommerce-phi-jet-67.vercel.app/login",
       githubUrl: "https://github.com/pentashi/ecommerce-",
       isReverseLayout: false
+    },
+    {
+      title: "Task Wizard",
+      emoji: "🧙‍♂️",
+      description: "A productivity app powered by Supabase. Real-time sync, smart notifications, authentication, and advanced user control via RLS.",
+      features: [
+        "Real-time database updates",
+        "Email login/magic link auth",
+        "Fully responsive and clean UI",
+        "Notifications + smart UX"
+      ],
+      tags: ["React", "Supabase", "TailwindCSS", "Zustand"],
+      image: "https://i.imgur.com/30gAlTp.png",
+      liveUrl: "https://task-wizard-unleashed-e388a3cf.vercel.app/",
+      githubUrl: "https://github.com/pentashi/task-wizard-unleashed-e388a3cf",
+      isReverseLayout: true
+    },
+    {
+      title: "Expense Tracker",
+      emoji: "💰",
+      description: "A smart expense management system built with Lumen (Laravel) backend and React frontend. Tracks income, expenses, budgets, and visualizes data with interactive charts.",
+      features: [
+        "JWT-secured API built with Lumen",
+        "Real-time expense tracking and summaries",
+        "Category-based analytics and charts",
+        "Multi-language support with i18next",
+        "Modern UI with PrimeReact and Tailwind styling"
+      ],
+      tags: ["React", "Lumen", "JWT Auth", "Chart.js", "PrimeReact"],
+      image: "https://i.ibb.co/4wT1G4km/expense-tracker.png",
+      liveUrl: "https://expense-tracker-nine-zeta-11.vercel.app/",
+      githubUrl: "https://github.com/pentashi/expense-tracker",
+      isReverseLayout: false
     }
-    // {
-    //   title: "QuickChat",
-    //   emoji: "🧨",
-    //   description: "A feature-rich messaging app focused on speed, security, and usability. Built with Socket.IO, Supabase Auth + DB, and a stunning Material UI.",
-    //   features: [
-    //     "Real-time messaging",
-    //     "Presence, typing indicators, read receipts",
-    //     "Media sharing and encrypted sessions",
-    //     "Web & mobile-ready (React + React Native)"
-    //   ],
-    //   tags: ["React", "Socket.IO", "Supabase", "Material UI", "React Native"],
-    //   image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    //   liveUrl: "#",
-    //   githubUrl: "#",
-    //   isReverseLayout: true
-    // },
-    // {
-    //   title: "OnePercent",
-    //   emoji: "🔥",
-    //   description: "Track daily streaks, avoid distractions, and rewire your brain to beat lust and scrolling addiction. Monk mode in a web app.",
-    //   features: [
-    //     "Habit dashboard with streak tracking",
-    //     "Daily journal + progress charts",
-    //     "Built to help users reach top 1% discipline",
-    //     "Focus timers and distraction blockers"
-    //   ],
-    //   tags: ["React", "MongoDB", "Express", "Node.js", "Recharts"],
-    //   image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    //   liveUrl: "#",
-    //   githubUrl: "#",
-    //   isReverseLayout: false
-    // }
   ];
 
   return (

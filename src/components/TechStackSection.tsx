@@ -28,7 +28,7 @@ const technologies: TechStackItemProps[] = [
   { name: 'MongoDB', Icon: SiMongodb, category: 'Backend' },
   { name: 'Socket.IO', Icon: SiSocketdotio, category: 'Realtime' },
   { name: 'Vercel', Icon: SiVercel, category: 'Deployment' },
-  { name: 'Laravel', Icon: SiLaravel, category: 'Backend' }, // ✅ Added Laravel at the end
+  { name: 'Laravel', Icon: SiLaravel, category: 'Backend' }, 
 ];
 
 const TechStackItem: React.FC<TechStackItemProps> = ({ name, Icon, category }) => {
