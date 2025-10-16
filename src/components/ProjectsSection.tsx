@@ -17,8 +17,8 @@ const ProjectsSection: React.FC = () => {
       ],
       tags: ["React", "Firebase", "Groq", "TailwindCSS"],
       image: "https://i.ibb.co/4g19h9ff/Untitled-design-4.png", 
-      liveUrl: "https://ai-fitness-coach.vercel.app/",
-      githubUrl: "https://github.com/pentashi/ai-fitness-coach",
+      liveUrl: "https://future-fit-ai-buddy-81.vercel.app/",
+      githubUrl: "https://github.com/pentashi/future-fit-ai-buddy-81/",
       isReverseLayout: true
     },
     {
@@ -37,8 +37,8 @@ const ProjectsSection: React.FC = () => {
       ],
       tags: ["NestJS", "MongoDB", "Socket.IO", "JWT", "Jest", "Firebase", "Swagger"],
       image: "https://i.ibb.co/spXh2HRg/cargolinkdoc.png", 
-      liveUrl: "https://cargolink-backend.vercel.app/",
-      githubUrl: "https://github.com/pentashi/amunir-backend",
+      liveUrl: "https://amunir-backend-xmn0.onrender.com/swagger",
+      githubUrl: "https://github.com/Cargo-Link/amunir-backend",
       isReverseLayout: true
     },
     {
