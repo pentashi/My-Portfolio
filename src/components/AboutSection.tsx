@@ -25,7 +25,7 @@ const AboutSection: React.FC = () => {
             </p>
 
             <p className="text-lg mb-6 text-gray-300">
-              Open to junior, contract, or underpaid roles to prove value fast and grow within
+              Open to junior, contract roles with a strong learning environment to prove value fast and grow within
               a strong engineering team.
             </p>
 
