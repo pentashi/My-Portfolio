@@ -9,7 +9,7 @@ import {
   SiMongodb,
   SiSocketdotio,
   SiVercel,
-  SiLaravel, // ✅ Added Laravel icon
+  SiLaravel,
 } from "react-icons/si";
 
 interface TechStackItemProps {
@@ -24,11 +24,11 @@ const technologies: TechStackItemProps[] = [
   { name: 'Material UI', Icon: SiMui, category: 'Frontend' },
   { name: 'Node.js', Icon: SiNodedotjs, category: 'Backend' },
   { name: 'Express', Icon: SiExpress, category: 'Backend' },
-  { name: 'Supabase', Icon: SiSupabase, category: 'Backend' },
-  { name: 'MongoDB', Icon: SiMongodb, category: 'Backend' },
+  { name: 'Laravel', Icon: SiLaravel, category: 'Backend' },
+  { name: 'Supabase', Icon: SiSupabase, category: 'Database/Auth' },
+  { name: 'MongoDB', Icon: SiMongodb, category: 'Database/Auth' },
   { name: 'Socket.IO', Icon: SiSocketdotio, category: 'Realtime' },
   { name: 'Vercel', Icon: SiVercel, category: 'Deployment' },
-  { name: 'Laravel', Icon: SiLaravel, category: 'Backend' }, 
 ];
 
 const TechStackItem: React.FC<TechStackItemProps> = ({ name, Icon, category }) => {
@@ -45,13 +45,12 @@ const TechStackSection: React.FC = () => {
   return (
     <section id="tech" className="py-20 px-4 bg-black/30">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2 text-white">My Tech Stack</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-2 text-white">Tech Stack</h2>
         <div className="h-1 w-20 bg-primary mb-8"></div>
         <p className="text-lg text-gray-300 mb-12 max-w-2xl">
-          I specialize in modern web and mobile technologies focused on building 
-          real-time, responsive, and scalable applications.
+          Technologies I use to build scalable, real-time, and production-ready web applications.
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           {technologies.map((tech, index) => (
             <TechStackItem 
               key={index} 

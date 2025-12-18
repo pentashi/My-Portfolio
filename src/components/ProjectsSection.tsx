@@ -4,52 +4,47 @@ import ProjectCard from './ProjectCard';
 const ProjectsSection: React.FC = () => {
   const projects = [
     {
-      title: "AI Fitness Coach (Beta)",
-      emoji: "💪",
-      description: "An AI-powered fitness assistant currently in Beta, generating personalized workout plans and providing real-time coaching through a chatbot. Live features include onboarding, custom plan generation, and interactive chat; live tracking, progress monitoring, and physique rating are coming soon.",
+      title: "AI Fitness Coach — Personalized Training Platform",
+      description:
+        "AI-powered fitness web application that generates personalized workout plans and provides real-time coaching through an interactive chatbot. Designed with a scalable architecture to support onboarding, plan generation, and future live tracking features.",
       features: [
-        "Beta version live with onboarding & AI-generated workout plans",
-        "AI chatbot for fitness coaching and habit guidance",
-        "Dynamic exercise suggestions adapting to user goals and environment",
-        "Real-time notifications and reminders",
-        "Built with React frontend and Firebase backend, with AI logic powered by Groq",
-        "Future updates: live tracking, progress monitoring, and physique rating"
+        "Personalized workout plan generation based on user profile and goals",
+        "AI chatbot for coaching, habit guidance, and Q&A",
+        "Secure authentication and structured onboarding flow",
+        "Modular architecture designed for future live tracking and analytics"
       ],
       tags: ["React", "Firebase", "Groq", "TailwindCSS"],
-      image: "https://i.ibb.co/4g19h9ff/Untitled-design-4.png", 
+      image: "https://i.ibb.co/4g19h9ff/Untitled-design-4.png",
       liveUrl: "https://future-fit-ai-buddy-81.vercel.app/",
       githubUrl: "https://github.com/pentashi/future-fit-ai-buddy-81/",
       isReverseLayout: true
     },
     {
-      title: "CargoLink / Amunir Backend",
-      emoji: "🚛",
-      description: "A robust backend API powering Amunir, a logistics platform designed to streamline importation and delivery for African entrepreneurs. Built with NestJS, MongoDB, and Socket.IO, supporting real-time order tracking, driver dispatch, and analytics while maintaining secure authentication and role-based access.",
+      title: "CargoLink — Logistics Backend & Real-Time Tracking API",
+      description:
+        "Production-grade backend system for a logistics platform supporting order management, real-time tracking, analytics, and secure role-based access.",
       features: [
-        "RESTful API architecture using NestJS with modular service/controller design",
-        "JWT authentication and role-based access control",
-        "Real-time order status updates via Socket.IO",
-        "Unit-tested endpoints using Jest for reliability and maintainability",
-        "Analytics for shipments, performance tracking, and operational insights",
-        "Firebase-powered notifications for instant delivery updates",
-        "Swagger API documentation for developer collaboration",
-        "CRUD operations for user management with secure password hashing (bcrypt)"
+        "RESTful API built with NestJS and MongoDB",
+        "JWT authentication with role-based access control",
+        "Real-time order status updates using Socket.IO",
+        "Shipment analytics, notifications, and tracking features",
+        "Comprehensive API documentation using Swagger"
       ],
       tags: ["NestJS", "MongoDB", "Socket.IO", "JWT", "Jest", "Firebase", "Swagger"],
-      image: "https://i.ibb.co/spXh2HRg/cargolinkdoc.png", 
+      image: "https://i.ibb.co/spXh2HRg/cargolinkdoc.png",
       liveUrl: "https://amunir-backend-xmn0.onrender.com/swagger",
       githubUrl: "https://github.com/Cargo-Link/amunir-backend",
       isReverseLayout: true
     },
     {
-      title: "ShopSmart",
-      emoji: "🛒",
-      description: "A modern e-commerce platform built for speed and scalability. Real-time inventory, secure checkout, and smooth user experience.",
+      title: "ShopSmart — E-Commerce Web Application",
+      description:
+        "Modern e-commerce platform focused on performance, usability, and secure online transactions.",
       features: [
-        "Product listings with filtering & sorting",
+        "Product listings with filtering and sorting",
         "User authentication and order history",
-        "Cart, checkout & payment integration",
-        "Responsive design with modern UI"
+        "Cart, checkout, and Stripe payment integration",
+        "Fully responsive and mobile-friendly UI"
       ],
       tags: ["React", "Supabase", "TailwindCSS", "Stripe"],
       image: "https://i.imgur.com/eteYXgS.png",
@@ -58,14 +53,14 @@ const ProjectsSection: React.FC = () => {
       isReverseLayout: true
     },
     {
-      title: "Task Wizard",
-      emoji: "🧙‍♂️",
-      description: "A productivity app powered by Supabase. Real-time sync, smart notifications, authentication, and advanced user control via RLS.",
+      title: "Task Wizard — Real-Time Productivity App",
+      description:
+        "Productivity web application with real-time data synchronization, authentication, and smart user notifications.",
       features: [
-        "Real-time database updates",
-        "Email login/magic link auth",
-        "Fully responsive and clean UI",
-        "Notifications + smart UX"
+        "Real-time updates powered by Supabase",
+        "Email and magic-link authentication",
+        "Row-level security (RLS) for user data protection",
+        "Clean, responsive interface with modern UX"
       ],
       tags: ["React", "Supabase", "TailwindCSS", "Zustand"],
       image: "https://i.imgur.com/30gAlTp.png",
@@ -74,17 +69,16 @@ const ProjectsSection: React.FC = () => {
       isReverseLayout: true
     },
     {
-      title: "Expense Tracker",
-      emoji: "💰",
-      description: "A smart expense management system built with Lumen (Laravel) backend and React frontend. Tracks income, expenses, budgets, and visualizes data with interactive charts.",
+      title: "Expense Tracker — Personal Finance Dashboard",
+      description:
+        "Expense management system for tracking income, expenses, budgets, and visual analytics.",
       features: [
-        "JWT-secured API built with Lumen",
-        "Real-time expense tracking and summaries",
-        "Category-based analytics and charts",
-        "Multi-language support with i18next",
-        "Modern UI with PrimeReact and Tailwind styling"
+        "JWT-secured API built with Lumen (Laravel)",
+        "Expense categorization and budget summaries",
+        "Interactive charts and financial insights",
+        "Multi-language support and modern UI"
       ],
-      tags: ["React", "Lumen", "JWT Auth", "Chart.js", "PrimeReact"],
+      tags: ["React", "Lumen", "JWT", "Chart.js", "PrimeReact"],
       image: "https://i.ibb.co/4wT1G4km/expense-tracker.png",
       liveUrl: "https://expense-tracker-nine-zeta-11.vercel.app/",
       githubUrl: "https://github.com/pentashi/expense-tracker",
@@ -95,15 +89,14 @@ const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">Featured Projects</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-2">Projects</h2>
         <div className="h-1 w-20 bg-primary mb-12"></div>
-        
+
         <div className="space-y-12">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
               title={project.title}
-              emoji={project.emoji}
               description={project.description}
               features={project.features}
               tags={project.tags}
@@ -111,8 +104,8 @@ const ProjectsSection: React.FC = () => {
               liveUrl={project.liveUrl}
               githubUrl={project.githubUrl}
               isReverseLayout={project.isReverseLayout}
-              imageClassName="w-full max-w-md h-64 object-cover rounded-lg" // ✅ fixed image sizing
-              cardClassName="glass-card hover-scale p-4 text-center rounded-lg flex flex-col items-center justify-between min-h-[500px]" // ✅ standardized card height
+              imageClassName="w-full max-w-md h-64 object-cover rounded-lg"
+              cardClassName="glass-card hover-scale p-4 rounded-lg flex flex-col justify-between min-h-[480px]"
             />
           ))}
         </div>
