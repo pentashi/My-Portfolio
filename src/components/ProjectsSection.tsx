@@ -83,6 +83,45 @@ const ProjectsSection: React.FC = () => {
       liveUrl: "https://expense-tracker-nine-zeta-11.vercel.app/",
       githubUrl: "https://github.com/pentashi/expense-tracker",
       isReverseLayout: true
+    },
+    {
+      title: "CEMAC Accounting Backend",
+      description:
+        "A modular, production-grade backend for CEMAC-compliant accounting management, built with NestJS, TypeORM, and PostgreSQL. Designed for enterprise use, with a focus on security, auditability, and extensibility.",
+      features: [
+        "Secure JWT authentication with RBAC (admin/user roles)",
+        "Modular architecture: invoices, partners, accounting, reporting, audit, notifications",
+        "Comprehensive audit logging (login, CRUD, exports)",
+        "Export/import for invoices, accounting entries, and partners (PDF, Excel, CSV)",
+        "Password reset with email integration",
+        "Notification system for key events",
+        "Swagger API documentation at /api-docs",
+        "Unit and e2e test coverage"
+      ],
+      tags: ["NestJS", "TypeORM", "PostgreSQL", "JWT", "Swagger", "TypeScript"],
+      image: "/public/cemac-accounting-swagger.png",
+      liveUrl: "https://cemac-accounting-backend.onrender.com/api-docs",
+      githubUrl: "https://github.com/pentashi/cemac-accounting-backend",
+      isReverseLayout: true
+    },
+    {
+      title: "CMS Cloud Backend",
+      description:
+        "A robust, scalable, and secure Content Management System (CMS) backend built with Node.js, TypeScript, Express, and Firebase Realtime Database.",
+      features: [
+        "User Authentication: Secure signup and login with JWT.",
+        "Post Management: Full CRUD API for posts with validation and authentication.",
+        "API Documentation: Interactive Swagger UI at /docs.",
+        "Validation: Strong input validation using Zod.",
+        "Centralized Error Handling: Consistent and informative error responses.",
+        "Security: Helmet, CORS, and environment-based configuration.",
+        "Logging: HTTP request logging with Morgan."
+      ],
+      tags: ["Express", "Firebase", "TypeScript", "Node.js", "Swagger", "Zod"],
+      image: "/public/cms-cloud-swagger.png",
+      liveUrl: "https://cms-cloud-6zht.onrender.com/docs",
+      githubUrl: "https://github.com/pentashi/cms-cloud",
+      isReverseLayout: true
     }
   ];
 

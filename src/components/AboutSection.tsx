@@ -13,20 +13,15 @@ const AboutSection: React.FC = () => {
           {/* Left Column */}
           <div className="md:col-span-1 flex flex-col justify-between">
             <p className="text-lg mb-4 text-gray-300">
-              Full-stack developer specializing in the MERN stack and real-time web applications.
-              I build production-ready systems with authentication, APIs, dashboards, and live data
-              using React, Node.js, MongoDB, and Socket.IO.
+              Full-Stack Software Engineer with hands-on experience building real-time, API-driven web applications in production environments. I specialize in React, Next.js, Node.js, TypeScript, and MongoDB, with a strong backend foundation focused on authentication, data integrity, and reliable system behavior under real-world conditions.
             </p>
 
             <p className="text-lg mb-4 text-gray-300">
-              I have hands-on experience building logistics platforms, AI-powered tools,
-              and scalable backend services with a strong focus on performance, security,
-              and maintainable code.
+              Recent projects include enterprise-grade accounting and logistics platforms, featuring robust authentication, modular architecture, and real-time features. I’ve also worked with Socket.IO to support real-time features and event-driven flows. My work includes handling edge cases, debugging production issues, designing for failure, and shipping features beyond ideal “happy-path” scenarios.
             </p>
 
             <p className="text-lg mb-6 text-gray-300">
-              Open to junior, contract roles with a strong learning environment to prove value fast and grow within
-              a strong engineering team.
+              I’m actively seeking full-stack or backend-leaning roles where I can grow within strong engineering teams and contribute to scalable systems. Open to mentorship, collaboration, and continuous learning. Let’s connect!
             </p>
 
             <div className="flex flex-wrap gap-4 mb-6">

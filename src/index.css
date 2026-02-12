@@ -47,6 +47,9 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   * {
     @apply border-border selection:bg-white/10 selection:text-white;
   }

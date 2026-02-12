@@ -4,31 +4,38 @@ import { ArrowRight } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-4 py-20 md:py-32">
+    <section className="min-h-screen flex flex-col justify-center px-4 py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-background">
       <div className="max-w-5xl mx-auto w-full animate-fade-in">
-        <div className="mb-6">
-          <h2 className="text-primary font-bold text-lg md:text-xl mb-3">
+        <div className="mb-8">
+          <h2 className="text-primary font-semibold text-xl md:text-2xl mb-4 tracking-wide">
             MBONGWE BRANDON EGBE
           </h2>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-            Full Stack <span className="text-gradient">MERN Developer</span><br />
-            Real-Time Apps & APIs
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-gradient">
+            Full-Stack Software Engineer | React, Node.js, TypeScript<br />
+            Real-Time & API-Driven Systems
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-8">
-            I build production-ready web applications using React, Node.js, MongoDB, 
-            and Socket.IO — including real-time systems, dashboards, authentication, 
-            and scalable backend APIs. Available immediately for contract or junior roles.
+            I build enterprise-grade web applications and backend APIs using React, Node.js, TypeScript, and MongoDB. My experience includes real-time systems, secure authentication, scalable cloud deployments, and production-ready features for logistics, finance, and CMS platforms. Open to contract, full-stack, and backend-focused roles in Dubai or remote. Ready to contribute and grow within strong engineering teams.
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="bg-primary text-white hover:bg-primary/80 cta-hover">
-              <a href="#projects">View Projects</a>
+            <Button
+              size="lg"
+              className="bg-primary text-white hover:bg-primary/80 cta-hover shadow-sm px-6 py-3 text-base font-medium rounded-lg transition-all duration-300"
+              onClick={() => {
+                const el = document.getElementById('projects');
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              View Projects
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
 
-            <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/5">
+            <Button size="md" variant="outline" className="border-white/20 hover:bg-white/5 px-4 py-2 text-base font-normal rounded-lg">
               <a href="#contact">Hire / Contact Me</a>
             </Button>
           </div>

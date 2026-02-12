@@ -30,21 +30,23 @@ const Navbar: React.FC = () => {
   return (
     <header 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'py-3 bg-black/80 backdrop-blur-lg shadow-md' : 'py-6 bg-transparent'
-      }`}
+        isScrolled
+          ? 'py-3 bg-white/10 backdrop-blur-md shadow-sm'
+          : 'py-6 bg-white/5 backdrop-blur-md'
+      } rounded-b-xl`}
     >
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="font-bold text-xl">
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+        <a href="#" className="font-bold text-2xl tracking-wider text-primary/80">
           MBE
         </a>
 
         {/* Desktop navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <a 
               key={link.name}
               href={link.href}
-              className="text-sm text-gray-300 hover:text-white transition-colors"
+              className="text-base text-gray-200 hover:text-primary/90 hover:underline hover:scale-105 transition-all duration-200 tracking-wide px-2"
             >
               {link.name}
             </a>
@@ -56,7 +58,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile menu toggle */}
         <button 
-          className="md:hidden p-2"
+          className="md:hidden p-2 rounded-full bg-white/10 hover:bg-primary/10 transition-all duration-200"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
