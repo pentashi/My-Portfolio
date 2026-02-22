@@ -4,6 +4,26 @@ import ProjectCard from './ProjectCard';
 const ProjectsSection: React.FC = () => {
   const projects = [
     {
+      title: "ReceiptVault — Enterprise Expense Management Platform",
+      description:
+        "ReceiptVault is designed for users in the UAE to scan receipts and track their expenses with ease. Enterprise-ready platform featuring OCR receipt scanning, automatic expense extraction, VAT tracking, analytics, and robust compliance. Built for Dubai & UAE businesses, supporting AED currency, bilingual UI, and production deployment with Docker and cloud scalability.",
+      features: [
+        "Receipt scanning with OCR (Pytesseract)",
+        "Expense tracking and automatic extraction (store, date, items, prices, VAT)",
+        "Dashboard analytics with charts and graphs",
+        "Categorization and budget management",
+        "UAE-specific features: AED, VAT, bilingual support",
+        "Production deployment: Docker, cloud-ready, horizontal scaling",
+        "Security: encrypted data, audit trail, GDPR/UAE compliance"
+      ],
+      tags: ["React", "TypeScript", "Vite", "TailwindCSS", "Python", "Flask", "PostgreSQL", "Docker", "Pytesseract"],
+      image: "/receiptvault-demo.png",
+      liveUrl: "https://receipt-vault-frontend-8pc5.onrender.com/",
+      githubUrl: "https://github.com/pentashi/Receipt-vault",
+      isReverseLayout: true,
+      emoji: "🧾"
+    },
+    {
       title: "AI Fitness Coach — Personalized Training Platform",
       description:
         "AI-powered fitness web application that generates personalized workout plans and provides real-time coaching through an interactive chatbot. Designed with a scalable architecture to support onboarding, plan generation, and future live tracking features.",
@@ -17,7 +37,8 @@ const ProjectsSection: React.FC = () => {
       image: "https://i.ibb.co/4g19h9ff/Untitled-design-4.png",
       liveUrl: "https://future-fit-ai-buddy-81.vercel.app/",
       githubUrl: "https://github.com/pentashi/future-fit-ai-buddy-81/",
-      isReverseLayout: true
+      isReverseLayout: true,
+      emoji: "💪"
     },
     {
       title: "CargoLink — Logistics Backend & Real-Time Tracking API",
@@ -34,7 +55,8 @@ const ProjectsSection: React.FC = () => {
       image: "https://i.ibb.co/spXh2HRg/cargolinkdoc.png",
       liveUrl: "https://amunir-backend-xmn0.onrender.com/swagger",
       githubUrl: "https://github.com/Cargo-Link/amunir-backend",
-      isReverseLayout: true
+      isReverseLayout: true,
+      emoji: "🚚"
     },
     {
       title: "ShopSmart — E-Commerce Web Application",
@@ -50,7 +72,8 @@ const ProjectsSection: React.FC = () => {
       image: "https://i.imgur.com/eteYXgS.png",
       liveUrl: "https://ecommerce-phi-jet-67.vercel.app/login",
       githubUrl: "https://github.com/pentashi/ecommerce-",
-      isReverseLayout: true
+      isReverseLayout: true,
+      emoji: "🛒"
     },
     {
       title: "Task Wizard — Real-Time Productivity App",
@@ -66,7 +89,8 @@ const ProjectsSection: React.FC = () => {
       image: "https://i.imgur.com/30gAlTp.png",
       liveUrl: "https://task-wizard-unleashed-e388a3cf.vercel.app/",
       githubUrl: "https://github.com/pentashi/task-wizard-unleashed-e388a3cf",
-      isReverseLayout: true
+      isReverseLayout: true,
+      emoji: "🧙"
     },
     {
       title: "Expense Tracker — Personal Finance Dashboard",
@@ -82,7 +106,8 @@ const ProjectsSection: React.FC = () => {
       image: "https://i.ibb.co/4wT1G4km/expense-tracker.png",
       liveUrl: "https://expense-tracker-nine-zeta-11.vercel.app/",
       githubUrl: "https://github.com/pentashi/expense-tracker",
-      isReverseLayout: true
+      isReverseLayout: true,
+      emoji: "💸"
     },
     {
       title: "CEMAC Accounting Backend",
@@ -99,10 +124,11 @@ const ProjectsSection: React.FC = () => {
         "Unit and e2e test coverage"
       ],
       tags: ["NestJS", "TypeORM", "PostgreSQL", "JWT", "Swagger", "TypeScript"],
-      image: "/public/cemac-accounting-swagger.png",
+      image: "/cemac-accounting-swagger.png",
       liveUrl: "https://cemac-accounting-backend.onrender.com/api-docs",
       githubUrl: "https://github.com/pentashi/cemac-accounting-backend",
-      isReverseLayout: true
+      isReverseLayout: true,
+      emoji: "📊"
     },
     {
       title: "CMS Cloud Backend",
@@ -118,10 +144,11 @@ const ProjectsSection: React.FC = () => {
         "Logging: HTTP request logging with Morgan."
       ],
       tags: ["Express", "Firebase", "TypeScript", "Node.js", "Swagger", "Zod"],
-      image: "/public/cms-cloud-swagger.png",
+      image: "/cms-cloud-swagger.png",
       liveUrl: "https://cms-cloud-6zht.onrender.com/docs",
       githubUrl: "https://github.com/pentashi/cms-cloud",
-      isReverseLayout: true
+      isReverseLayout: true,
+      emoji: "☁️"
     }
   ];
 
@@ -142,10 +169,7 @@ const ProjectsSection: React.FC = () => {
               image={project.image}
               liveUrl={project.liveUrl}
               githubUrl={project.githubUrl}
-              isReverseLayout={project.isReverseLayout}
-              imageClassName="w-full max-w-md h-64 object-cover rounded-lg"
-              cardClassName="glass-card hover-scale p-4 rounded-lg flex flex-col justify-between min-h-[480px]"
-            />
+              />
           ))}
         </div>
       </div>
