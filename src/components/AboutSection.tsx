@@ -27,7 +27,7 @@ const AboutSection: React.FC = () => {
             <div className="flex flex-wrap gap-4 mb-6">
               <Button className="bg-primary hover:bg-primary/80">
                 <a
-                  href="https://drive.google.com/file/d/1t_Qobaac7qY4c74DENZvf2ViQsgjzvQf/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1HbBIV9oczKzwjdm3ZgfmC8JKw5jo62jA/view?usp=sharing"
                   className="text-white"
                 >
                   Download Resume
