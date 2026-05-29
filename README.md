@@ -1,87 +1,103 @@
-👋 Welcome to My Developer Portfolio
+# My Portfolio
 
-This is the source code for my personal portfolio, a modern, responsive website showcasing my skills, featured projects, and my approach as a full-stack engineer specializing in real-time apps, interactive web experiences, and digital wellness.
+A production-ready personal portfolio application built with React, TypeScript, and Vite.  
+The project is designed to present professional experience, featured work, and technical capabilities through a performant, responsive, and maintainable frontend architecture.
 
-🚀 Project Overview
+## Executive Summary
 
-This portfolio demonstrates:
+This repository contains the source code for a modern portfolio platform with:
 
-Professional skills in front-end and back-end development
+- Responsive, mobile-first user experience
+- Component-based UI architecture for scalability
+- Type-safe development workflow with TypeScript
+- Fast local development and optimized production builds
+- Structured styling using Tailwind CSS and reusable UI primitives
 
-Key projects with live demos and source code links
+## Key Capabilities
 
-Clean, modern UI/UX using the latest frontend technologies
+- Professional profile and project showcase
+- Clean and consistent design system implementation
+- Reusable UI components for rapid content evolution
+- Performance-focused frontend delivery via Vite
+- Easy deployment to modern static hosting platforms
 
-Responsive design for desktop, tablet, and mobile
+## Technology Stack
 
-It’s designed to highlight my capabilities in building scalable, maintainable, and high-performance web applications.
+- **Framework:** React 18
+- **Language:** TypeScript
+- **Build Tool:** Vite 5
+- **Styling:** Tailwind CSS
+- **UI Primitives:** Radix UI + shadcn/ui patterns
+- **Routing:** React Router
+- **Data Utilities:** TanStack React Query, Zod, React Hook Form
 
-🛠️ Getting Started Locally
+## Local Development
 
-To run this project locally, ensure you have Node.js and npm installed. You can install Node.js via nvm
- if needed.
+### Prerequisites
 
-Then follow these steps:
+- Node.js (LTS recommended)
+- npm
 
-# 1. Clone the repository
-git clone <https://github.com/pentashi/New-Portfolio.git>
+### Setup
 
-# 2. Navigate to the project folder
-cd <New-Portfolio>
-
-# 3. Install dependencies
+```bash
+git clone https://github.com/pentashi/My-Portfolio.git
+cd My-Portfolio
 npm install
+```
 
-# 4. Start the development server
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+Default local URL: `http://localhost:8080`
+
+## Build and Quality Commands
+
+```bash
+# Start local development server
 npm run dev
 
-
-Your portfolio will now be available at http://localhost:8080
- (or as specified in your configuration).
-
-🧰 Tech Stack
-
-This portfolio is built with:
-
-⚡ Vite – Fast frontend build tool
-
-🟨 TypeScript – Strongly typed JavaScript for safety and scalability
-
-⚛️ React – Component-driven UI
-
-🎨 Tailwind CSS – Modern, responsive styling
-
-🧩 shadcn/ui – Ready-to-use UI components
-
-Optional tools included for productivity:
-
-React Icons, Typewriter Effect, React Parallax Tilt, and React PDF renderer
-
-🌍 Deployment
-
-You can deploy this portfolio on platforms like Vercel or Netlify. Steps:
-
-Push this code to a GitHub repository
-
-Connect the repository to your preferred platform
-
-Set the build command:
-
+# Create production build
 npm run build
 
+# Build with development mode config
+npm run build:dev
 
-Set the output directory: dist
+# Lint project files
+npm run lint
 
-(Optional) Connect a custom domain via your platform’s dashboard
+# Preview production build locally
+npm run preview
+```
 
-💡 Features
+## Deployment
 
-Fully responsive design
+The project is deployment-ready for platforms such as Vercel, Netlify, and Cloudflare Pages.
 
-Showcase of featured projects with GitHub and live demo links
+- **Build command:** `npm run build`
+- **Output directory:** `dist`
 
-Smooth animations and interactive UI
+## Repository Structure
 
-Type-safe development with TypeScript
+```text
+My-Portfolio/
+├── public/            # Static assets
+├── src/               # Application source code
+├── package.json       # Scripts and dependency manifest
+├── vite.config.ts     # Build and dev server configuration
+└── tailwind.config.ts # Styling system configuration
+```
 
-Easy to extend and maintain
+## Engineering Standards
+
+- Strong typing and maintainability through TypeScript
+- Linting-based code quality enforcement via ESLint
+- Modular architecture to support long-term extensibility
+- Consistent UI behavior using standardized component primitives
+
+## License
+
+This project is provided for portfolio and professional presentation purposes.
