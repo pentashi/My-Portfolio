@@ -6,22 +6,38 @@ const ProjectsSection: React.FC = () => {
     {
       title: "ReceiptVault — Enterprise Expense Management Platform",
       description:
-        "ReceiptVault is designed for users in the UAE to scan receipts and track their expenses with ease. Enterprise-ready platform featuring OCR receipt scanning, automatic expense extraction, VAT tracking, analytics, and robust compliance. Built for Dubai & UAE businesses, supporting AED currency, bilingual UI, and production deployment with Docker and cloud scalability.",
+        "A cloud-native, production-grade fintech SaaS platform built on a scalable Google Cloud Platform (GCP) microservices architecture. It automates expense tracking for UAE enterprises by leveraging Google Cloud Document AI for advanced field extraction and GCS for secure storage. Fully containerized with Docker, configured via automated Cloud Build CI/CD pipelines, and deployed to serverless runtimes for horizontal scalability and UAE compliance.",
       features: [
-        "Receipt scanning with OCR (Pytesseract)",
-        "Expense tracking and automatic extraction (store, date, items, prices, VAT)",
-        "Dashboard analytics with charts and graphs",
-        "Categorization and budget management",
-        "UAE-specific features: AED, VAT, bilingual support",
-        "Production deployment: Docker, cloud-ready, horizontal scaling",
-        "Security: encrypted data, audit trail, GDPR/UAE compliance"
+        "Enterprise AI OCR: Standardized on Google Cloud Document AI (Expense Processor) to automate high-accuracy parsing of merchant names, line items, and transaction metadata.",
+        "Cloud Architecture: Developed an asynchronous pipeline storing media securely in Google Cloud Storage (GCS) and tracking structured relational states.",
+        "Automated DevSecOps: Integrated secure authentication flows and orchestrated end-to-end continuous deployment using GCP Cloud Build CI/CD pipelines.",
+        "UAE Regulatory Framework: Engineered natively for Dubai businesses with full 5% VAT tracking, AED processing rules, and a bilingual, RTL-ready interface.",
+        "Scalable Back-to-Front Stack: Built with a highly responsive React 18 / TypeScript frontend and a stateless Flask backend optimized for deployment over serverless infrastructure."
       ],
-      tags: ["React", "TypeScript", "Vite", "TailwindCSS", "Python", "Flask", "PostgreSQL", "Docker", "Pytesseract"],
+      tags: ["React", "TypeScript", "Python", "Flask", "GCP", "Document AI", "GCS", "Cloud Build", "PostgreSQL", "Docker"],
       image: "/receiptvault-demo.png",
-      liveUrl: "https://receipt-vault-frontend-8pc5.onrender.com/",
+      liveUrl: "https://receiptvault-frontend-210041012141.me-central1.run.app/",
       githubUrl: "https://github.com/pentashi/Receipt-vault",
       isReverseLayout: true,
       emoji: "🧾"
+    },
+    {
+      title: "AutoPartage Gabon — Enterprise Fleet Analytics Engine",
+      description:
+        "A multi-tenant fleet and rental management ecosystem engineered to process complex rent-to-own lifecycles. Built with an optimized UI state machine to prevent data race conditions and integrated with automated, serverless infrastructure health checks for continuous application uptime.",
+      features: [
+        "Interactive analytics dashboard managing real-time vehicle metrics and fleet utilization",
+        "Asynchronous remote state architecture handling complex rent-to-own operational data rules",
+        "Robust input formatting and type-safe schema constraints ensuring 100% financial alignment accuracy",
+        "Automated continuous integration and deployment profiles containerized via Cloud Run",
+        "Custom external monitoring cron endpoints providing zero unnotified system pauses"
+      ],
+      tags: ["Next.js", "React", "TypeScript", "Express", "Prisma ORM", "PostgreSQL", "GCP", "Docker", "GitHub Actions"],
+      image: "/autopartage.png",
+      liveUrl: "https://autopartage-frontend-19378503105.europe-west1.run.app/", // Update to front/back endpoint as preferred
+      githubUrl: "https://github.com/pentashi/AutoPartage-Gabon-location-vente", 
+      isReverseLayout: false,
+      emoji: "🚗"
     },
     {
       title: "AI Fitness Coach — Personalized Training Platform",
@@ -169,7 +185,7 @@ const ProjectsSection: React.FC = () => {
               image={project.image}
               liveUrl={project.liveUrl}
               githubUrl={project.githubUrl}
-              />
+            />
           ))}
         </div>
       </div>
