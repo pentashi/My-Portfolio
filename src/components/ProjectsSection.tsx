@@ -90,6 +90,18 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/pentashi/Receipt-vault",
       isReverseLayout: true,
       emoji: "🧾"
+    },
+    {
+      title: "AI Fitness Coach — Personal Project",
+      description:
+        "An early exploration of AI integration — personalized workout plan generation using Groq LLM with a React frontend and Firebase backend. Built to learn real-time AI API integration patterns.",
+      features: [],
+      tags: ["React", "Firebase", "Groq", "TailwindCSS"],
+      image: "https://i.ibb.co/4g19h9ff/Untitled-design-4.png",
+      liveUrl: "https://future-fit-ai-buddy-81.vercel.app/",
+      githubUrl: "https://github.com/pentashi/future-fit-ai-buddy-81/",
+      isReverseLayout: true,
+      emoji: "💪"
     }
   ];
 
