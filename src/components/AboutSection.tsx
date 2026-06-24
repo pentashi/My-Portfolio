@@ -12,16 +12,8 @@ const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Left Column */}
           <div className="md:col-span-1 flex flex-col justify-between">
-            <p className="text-lg mb-4 text-gray-300">
-              Full-Stack Software Engineer with hands-on experience building real-time, API-driven web applications in production environments. I specialize in React, Next.js, Node.js, TypeScript, and MongoDB, with a strong backend foundation focused on authentication, data integrity, and reliable system behavior under real-world conditions.
-            </p>
-
-            <p className="text-lg mb-4 text-gray-300">
-              Recent projects include enterprise-grade accounting and logistics platforms, featuring robust authentication, modular architecture, and real-time features. I’ve also worked with Socket.IO to support real-time features and event-driven flows. My work includes handling edge cases, debugging production issues, designing for failure, and shipping features beyond ideal “happy-path” scenarios.
-            </p>
-
             <p className="text-lg mb-6 text-gray-300">
-              I’m actively seeking full-stack or backend-leaning roles where I can grow within strong engineering teams and contribute to scalable systems. Open to mentorship, collaboration, and continuous learning. Let’s connect!
+              Full-Stack and Cloud Engineer with proven experience delivering production systems for international clients across logistics, fintech, and cross-border trade. I specialize in NestJS, Next.js, TypeScript, and PostgreSQL, with deep backend expertise in event-driven architecture, JWT/RBAC security, and GCP cloud infrastructure. I hold a GCP Associate Cloud Engineer certification and have shipped three enterprise-grade systems for a logistics firm operating across China, Cameroon, and Gabon. What I care about is building things that survive contact with real users and real cloud bills — cost-aware, secure, and built to scale. Currently based in Dubai and actively looking for full-stack or backend engineering roles.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-6">
@@ -42,7 +34,7 @@ const AboutSection: React.FC = () => {
           <div className="glass-card p-6 rounded-lg animate-scale-in flex flex-col md:w-full">
             <h3 className="text-xl font-bold mb-3 text-gradient">Location</h3>
             <p className="mb-4 text-gray-300">
-              Dubai, UAE <span className="text-primary">(Available Immediately)</span>
+              Dubai, UAE
             </p>
 
             <h3 className="text-xl font-bold mb-3 text-gradient mt-6">Experience</h3>
@@ -51,7 +43,7 @@ const AboutSection: React.FC = () => {
               <h4 className="text-lg font-bold text-primary">
                 Software Engineering Intern <span className="text-gray-400">– ENEO Cameroon</span>
               </h4>
-              <p className="mb-1 text-gray-300">Jul 2023 – Sept 2023</p>
+              <p className="mb-1 text-gray-300">Jul 2022 – Sep 2022</p>
               <ul className="list-disc pl-5 text-gray-300">
                 <li>Contributed to an internal recruitment platform used across teams</li>
                 <li>Implemented unit tests, reducing frontend bugs by ~20%</li>
@@ -61,15 +53,14 @@ const AboutSection: React.FC = () => {
 
             <div className="mb-6">
               <h4 className="text-lg font-bold text-primary">
-                Backend Developer <span className="text-gray-400">– Amunir Logistics</span>
+                Independent Software Consultant <span className="text-gray-400">– AMSIT & AMSI Group</span>
               </h4>
-              <p className="mb-1 text-gray-300">Jul 2024 – Present</p>
+              <p className="mb-1 text-gray-300">Jul 2024 – Present | China · Cameroon · Gabon · Remote</p>
               <ul className="list-disc pl-5 text-gray-300">
-                <li>Designed and built RESTful APIs using Node.js, Express, and MongoDB</li>
-                <li>Implemented JWT authentication and role-based access control</li>
-                <li>Developed real-time order tracking using Socket.IO</li>
-                <li>Built analytics, notifications, and secure user management features</li>
-                <li>Maintained code quality with testing, Git workflows, and CI practices</li>
+                <li>Delivered three enterprise-grade backend systems for a cross-border logistics firm operating across China, Cameroon, and Gabon</li>
+                <li>CargoLink: Architected event-driven NestJS APIs managing 1,200+ real-time GPS state updates/minute with sub-second synchronization</li>
+                <li>AutoPartage: Built fleet management and rent-to-own backend with PostgreSQL optimization achieving 40% reduction in reporting latency</li>
+                <li>CEMAC Ledger: Engineered OHADA-compliant financial accounting engine with audit logging, RBAC, and real-time report streaming</li>
               </ul>
             </div>
 

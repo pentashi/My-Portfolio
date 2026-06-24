@@ -2,14 +2,15 @@ import React from 'react';
 import {
   SiReact,
   SiTailwindcss,
-  SiMui,
   SiNodedotjs,
   SiExpress,
-  SiSupabase,
-  SiMongodb,
+  SiNestjs,
+  SiPostgresql,
+  SiGooglecloud,
+  SiTerraform,
+  SiDocker,
+  SiRedis,
   SiSocketdotio,
-  SiVercel,
-  SiLaravel,
 } from "react-icons/si";
 
 interface TechStackItemProps {
@@ -21,14 +22,15 @@ interface TechStackItemProps {
 const technologies: TechStackItemProps[] = [
   { name: 'React', Icon: SiReact, category: 'Frontend' },
   { name: 'TailwindCSS', Icon: SiTailwindcss, category: 'Frontend' },
-  { name: 'Material UI', Icon: SiMui, category: 'Frontend' },
   { name: 'Node.js', Icon: SiNodedotjs, category: 'Backend' },
   { name: 'Express', Icon: SiExpress, category: 'Backend' },
-  { name: 'Laravel', Icon: SiLaravel, category: 'Backend' },
-  { name: 'Supabase', Icon: SiSupabase, category: 'Database/Auth' },
-  { name: 'MongoDB', Icon: SiMongodb, category: 'Database/Auth' },
+  { name: 'NestJS', Icon: SiNestjs, category: 'Backend' },
+  { name: 'PostgreSQL', Icon: SiPostgresql, category: 'Database' },
+  { name: 'GCP', Icon: SiGooglecloud, category: 'Cloud' },
+  { name: 'Terraform', Icon: SiTerraform, category: 'Infrastructure' },
+  { name: 'Docker', Icon: SiDocker, category: 'Infrastructure' },
+  { name: 'Redis', Icon: SiRedis, category: 'Database' },
   { name: 'Socket.IO', Icon: SiSocketdotio, category: 'Realtime' },
-  { name: 'Vercel', Icon: SiVercel, category: 'Deployment' },
 ];
 
 const TechStackItem: React.FC<TechStackItemProps> = ({ name, Icon, category }) => {

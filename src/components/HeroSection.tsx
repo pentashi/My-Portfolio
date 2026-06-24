@@ -12,12 +12,12 @@ const HeroSection: React.FC = () => {
           </h2>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
-            Full-Stack Software Engineer | React, Node.js, TypeScript<br />
-            <span className="text-gradient">Real-Time & API-Driven Systems</span>
+            Full-Stack Engineer | NestJS · Next.js · TypeScript · GCP ACE Certified<br />
+            <span className="text-gradient">Building AI-Driven & Cloud-Native Systems in Dubai</span>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-8">
-            I build enterprise-grade web applications and backend APIs using React, Node.js, TypeScript, and MongoDB. My experience includes real-time systems, secure authentication, scalable cloud deployments, and production-ready features for logistics, finance, and CMS platforms. Open to contract, full-stack, and backend-focused roles in Dubai or remote. Ready to contribute and grow within strong engineering teams.
+            I build production-grade backend systems and cloud-native applications using NestJS, Next.js, TypeScript, and PostgreSQL. Delivered enterprise systems across logistics, fintech, and cross-border trade for international clients. GCP Certified Associate Cloud Engineer. Open to full-stack and backend engineering roles in Dubai.
           </p>
 
           <div className="flex flex-wrap gap-4">
