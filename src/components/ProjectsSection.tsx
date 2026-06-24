@@ -69,7 +69,7 @@ const ProjectsSection: React.FC = () => {
         "Automated admin verification queue for caregiver approvals"
       ],
       tags: ["NestJS", "Next.js", "TypeScript", "PostgreSQL", "Stripe", "GCP"],
-      githubUrl: "https://github.com/pentashi/nannylink",
+      githubUrl: "https://github.com/pentashi/nanny-link.git",
       isReverseLayout: false,
       emoji: "👶"
     },
