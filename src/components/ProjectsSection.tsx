@@ -6,125 +6,134 @@ const ProjectsSection: React.FC = () => {
     {
       title: "CargoLink — Logistics Backend & Real-Time Tracking API",
       description:
-        "Production-grade backend system for a logistics platform supporting order management, real-time tracking, analytics, and secure role-based access.",
+        "Production-grade backend system for a logistics platform supporting order management, live tracking, analytics, and secure role-based access for distributed operations teams.",
       features: [
         "Architected event-driven NestJS APIs managing 1,200+ real-time GPS state updates/minute with sub-second synchronization",
         "JWT authentication with role-based access control",
         "Real-time shipment updates and analytics for logistics operations",
         "Comprehensive API documentation using Swagger",
-        "Secure, production-ready backend architecture"
       ],
       tags: ["NestJS", "PostgreSQL", "Socket.IO", "JWT", "Swagger", "TypeScript"],
       image: "https://i.ibb.co/spXh2HRg/cargolinkdoc.png",
       liveUrl: "https://amunir-backend-xmn0.onrender.com/swagger",
       githubUrl: "https://github.com/Cargo-Link/amunir-backend",
-      isReverseLayout: true,
-      emoji: "🚚"
+      emoji: "🚚",
+      isFlagship: true,
     },
     {
       title: "AutoPartage Gabon — Enterprise Fleet Analytics Engine",
       description:
-        "A multi-tenant fleet and rental management ecosystem engineered to process complex rent-to-own lifecycles. Built with an optimized UI state machine to prevent data race conditions and integrated with automated, serverless infrastructure health checks for continuous application uptime.",
+        "A multi-tenant fleet and rental management system engineered around rent-to-own lifecycles, operational analytics, and uptime-aware infrastructure.",
       features: [
-        "Interactive analytics dashboard managing real-time vehicle metrics and fleet utilization",
-        "Asynchronous remote state architecture handling complex rent-to-own operational data rules",
         "PostgreSQL optimization achieving a 40% reduction in reporting latency",
-        "Automated continuous integration and deployment profiles containerized via Cloud Run",
-        "Custom external monitoring cron endpoints providing zero unnotified system pauses"
+        "Interactive analytics dashboard managing real-time vehicle metrics and fleet utilization",
+        "Asynchronous remote state architecture handling complex operational data rules",
+        "Automated deployment profiles containerized via Cloud Run",
       ],
-      tags: ["Next.js", "React", "TypeScript", "Express", "Prisma ORM", "PostgreSQL", "GCP", "Docker", "GitHub Actions"],
+      tags: ["Next.js", "React", "TypeScript", "Express", "Prisma ORM", "PostgreSQL", "GCP", "Docker"],
       image: "/autopartage.png",
       liveUrl: "https://autopartage-frontend-19378503105.europe-west1.run.app/",
       githubUrl: "https://github.com/pentashi/AutoPartage-Gabon-location-vente",
-      isReverseLayout: false,
-      emoji: "🚗"
+      emoji: "🚗",
+      isFlagship: true,
     },
     {
       title: "CEMAC Accounting Backend",
       description:
-        "A modular, production-grade backend for CEMAC-compliant accounting management, built with NestJS, TypeORM, and PostgreSQL. Designed for enterprise use, with a focus on security, auditability, and extensibility.",
+        "A modular backend for CEMAC-compliant accounting workflows, designed with strong security boundaries, auditability, and extensibility for enterprise use.",
       features: [
-        "Secure JWT authentication with RBAC (admin/user roles)",
-        "Modular architecture: invoices, partners, accounting, reporting, audit, notifications",
         "Comprehensive audit logging (login, CRUD, exports)",
-        "Real-time report streaming and secure financial workflows",
-        "Export/import for invoices, accounting entries, and partners (PDF, Excel, CSV)"
+        "Secure JWT authentication with RBAC",
+        "Modular architecture for invoices, partners, accounting, reporting, and notifications",
+        "Export and import flows for invoices, entries, and partner data",
       ],
       tags: ["NestJS", "TypeORM", "PostgreSQL", "JWT", "Swagger", "TypeScript"],
       image: "/cemac-accounting-swagger.png",
       liveUrl: "https://cemac-accounting-backend.onrender.com/api-docs",
       githubUrl: "https://github.com/pentashi/cemac-accounting-backend",
-      isReverseLayout: true,
-      emoji: "📊"
+      emoji: "📊",
     },
     {
       title: "NannyLink — Caregiver Matching Platform",
       description:
-        "Pay-per-unlock caregiver marketplace built for the UAE and global market. Parents pay once to unlock a verified caregiver's contact. Features Stripe webhook payment processing, dual-role JWT authentication (parent/caregiver), GCS signed-URL video uploads, and an automated admin verification queue.",
+        "A pay-per-unlock caregiver marketplace for the UAE with payment verification, admin moderation, and secure media workflows.",
       features: [
-        "Pay-per-unlock caregiver marketplace for UAE and global users",
-        "Stripe webhook payment processing and verification workflows",
+        "Stripe webhook payment processing with caregiver verification workflows",
         "Dual-role JWT authentication for parents and caregivers",
         "GCS signed-URL video uploads and secure media handling",
         "Automated admin verification queue for caregiver approvals"
       ],
       tags: ["NestJS", "Next.js", "TypeScript", "PostgreSQL", "Stripe", "GCP"],
       githubUrl: "https://github.com/pentashi/nanny-link.git",
-      isReverseLayout: false,
       emoji: "👶"
     },
     {
       title: "ReceiptVault — Enterprise Expense Management Platform",
       description:
-        "A cloud-native, production-grade fintech SaaS platform built on a scalable Google Cloud Platform (GCP) microservices architecture. It automates expense tracking for UAE enterprises by leveraging Google Cloud Document AI for advanced field extraction and GCS for secure storage. Fully containerized with Docker, configured via automated Cloud Build CI/CD pipelines, and deployed to serverless runtimes for horizontal scalability and UAE compliance.",
+        "A cloud-native expense management product for UAE businesses using Google Cloud Document AI, secure storage, and containerized deployment pipelines.",
       features: [
-        "Enterprise AI OCR: Standardized on Google Cloud Document AI (Expense Processor) to automate high-accuracy parsing of merchant names, line items, and transaction metadata.",
-        "Cloud Architecture: Developed an asynchronous pipeline storing media securely in Google Cloud Storage (GCS) and tracking structured relational states.",
-        "Automated DevSecOps: Integrated secure authentication flows and orchestrated end-to-end continuous deployment using GCP Cloud Build CI/CD pipelines.",
-        "UAE Regulatory Framework: Engineered natively for Dubai businesses with full 5% VAT tracking, AED processing rules, and a bilingual, RTL-ready interface.",
-        "Scalable Back-to-Front Stack: Built with a highly responsive React 18 / TypeScript frontend and a stateless Flask backend optimized for deployment over serverless infrastructure."
+        "Standardized on Google Cloud Document AI for high-accuracy receipt extraction",
+        "Asynchronous pipelines storing media in GCS and tracking structured state",
+        "Automated Cloud Build CI/CD for secure deployments",
+        "Built for VAT-aware UAE business workflows",
       ],
-      tags: ["React", "TypeScript", "Python", "Flask", "GCP", "Document AI", "GCS", "Cloud Build", "PostgreSQL", "Docker"],
+      tags: ["React", "TypeScript", "Python", "Flask", "GCP", "Document AI", "Docker"],
       image: "/receiptvault-demo.png",
       liveUrl: "https://receiptvault-frontend-210041012141.me-central1.run.app/",
       githubUrl: "https://github.com/pentashi/Receipt-vault",
-      isReverseLayout: true,
       emoji: "🧾"
     },
     {
-      title: "AI Fitness Coach — Personal Project",
+      title: "AI Fitness Coach",
       description:
-        "An early exploration of AI integration — personalized workout plan generation using Groq LLM with a React frontend and Firebase backend. Built to learn real-time AI API integration patterns.",
-      features: [],
+        "An early AI integration experiment focused on personalized workout generation with a React frontend and Firebase-backed flows.",
+      features: [
+        "Personalized workout plan generation using Groq LLM APIs",
+        "React frontend connected to Firebase backend workflows",
+        "Exploration of real-time AI API integration patterns",
+      ],
       tags: ["React", "Firebase", "Groq", "TailwindCSS"],
       image: "https://i.ibb.co/4g19h9ff/Untitled-design-4.png",
       liveUrl: "https://future-fit-ai-buddy-81.vercel.app/",
       githubUrl: "https://github.com/pentashi/future-fit-ai-buddy-81/",
-      isReverseLayout: true,
       emoji: "💪"
     }
   ];
 
-  return (
-    <section id="projects" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">Projects</h2>
-        <div className="h-1 w-20 bg-primary mb-12"></div>
+  const flagshipProjects = projects.filter((project) => project.isFlagship);
+  const selectedProjects = projects.filter((project) => !project.isFlagship);
 
-        <div className="space-y-12">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              features={project.features}
-              tags={project.tags}
-              image={project.image}
-              liveUrl={project.liveUrl}
-              githubUrl={project.githubUrl}
-              emoji={project.emoji}
-            />
+  return (
+    <section id="projects" className="section-shell border-t border-white/8">
+      <div className="content-grid gap-16">
+        <div className="max-w-4xl">
+          <p className="eyebrow mb-5">Selected Work</p>
+          <h2 className="mb-6 max-w-3xl text-3xl font-semibold tracking-[-0.03em] text-white md:text-5xl">
+            Systems built for operational complexity, not just polished demos.
+          </h2>
+          <p className="max-w-2xl text-lg leading-8 text-white/62">
+            These projects highlight the kind of engineering I enjoy most: real data, real users, infrastructure constraints, and software that has to keep working after release.
+          </p>
+        </div>
+
+        <div className="space-y-10">
+          {flagshipProjects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
           ))}
+        </div>
+
+        <div className="grid gap-6 border-t border-white/10 pt-12 lg:grid-cols-2">
+          <div>
+            <p className="mb-4 text-xs uppercase tracking-[0.3em] text-white/45">Additional Build Work</p>
+            <p className="max-w-xl text-base leading-7 text-white/58">
+              More systems across accounting, care marketplaces, fintech automation, and AI exploration.
+            </p>
+          </div>
+          <div className="space-y-6 lg:col-span-2">
+            {selectedProjects.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,104 +1,80 @@
 
-import React, { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
+import React, { useEffect, useState } from 'react';
+
+const navLinks = [
+  { name: 'About', href: '#about' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Stack', href: '#tech' },
+  { name: 'Contact', href: '#contact' },
+];
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Tech Stack', href: '#tech' },
-    { name: 'Collaborate', href: '#collaborate' },
-    { name: 'Contact', href: '#contact' },
-  ];
-
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 24);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'py-3 bg-white/10 backdrop-blur-md shadow-sm'
-          : 'py-6 bg-white/5 backdrop-blur-md'
-      } rounded-b-xl`}
-    >
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="font-bold text-2xl tracking-wider text-primary/80">
+    <header className="fixed top-0 left-0 z-50 w-full px-4 py-4 md:px-8">
+      <div
+        className={`mx-auto flex max-w-6xl items-center justify-between border px-5 py-4 transition-all duration-300 md:px-6 ${
+          isScrolled
+            ? 'border-white/15 bg-black/75 backdrop-blur-xl'
+            : 'border-white/10 bg-black/35 backdrop-blur-md'
+        }`}
+      >
+        <a href="#" className="text-sm font-semibold uppercase tracking-[0.35em] text-white">
           MBE
         </a>
 
-        {/* Desktop navigation */}
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <a 
+            <a
               key={link.name}
               href={link.href}
-              className="text-base text-gray-200 hover:text-primary/90 hover:underline hover:scale-105 transition-all duration-200 tracking-wide px-2"
+              className="text-xs uppercase tracking-[0.24em] text-white/68 transition-colors duration-200 hover:text-white"
             >
               {link.name}
             </a>
           ))}
-          {/* <Button className="bg-primary hover:bg-primary/80 cta-hover">
-            Contact
-          </Button> */}
         </nav>
 
-        {/* Mobile menu toggle */}
-        <button 
-          className="md:hidden p-2 rounded-full bg-white/10 hover:bg-primary/10 transition-all duration-200"
+        <a
+          href="#contact"
+          className="hidden border border-white/15 px-4 py-2 text-xs uppercase tracking-[0.24em] text-white transition-colors hover:bg-white hover:text-black md:inline-flex"
+        >
+          Available for Roles
+        </a>
+
+        <button
+          className="inline-flex h-10 w-10 items-center justify-center border border-white/15 text-white md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          <div className="w-6 flex flex-col gap-1.5">
-            <span className={`block h-0.5 bg-white transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-            <span className={`block h-0.5 bg-white transition-opacity ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-            <span className={`block h-0.5 bg-white transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-          </div>
+          <span className="text-lg">{isMobileMenuOpen ? '×' : '≡'}</span>
         </button>
       </div>
 
-      {/* Mobile navigation */}
-      <div 
-  className={`md:hidden fixed inset-0 z-[999] bg-[#0a0a0a] transition-transform duration-300 transform ${
-    isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-  }`}
->
-
-        <div className="h-full flex flex-col pt-20 px-8">
-          <nav className="flex flex-col gap-6">
+      {isMobileMenuOpen && (
+        <div className="mx-auto mt-2 max-w-6xl border border-white/10 bg-black/92 p-6 backdrop-blur-xl md:hidden">
+          <nav className="flex flex-col gap-5">
             {navLinks.map((link) => (
-              <a 
+              <a
                 key={link.name}
                 href={link.href}
-                className="text-white text-xl hover:text-primary transition-colors"
-
+                className="text-sm uppercase tracking-[0.24em] text-white/78"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
               </a>
             ))}
-            {/* <Button 
-              className="bg-primary hover:bg-primary/80 mt-4"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Contact
-            </Button> */}
           </nav>
         </div>
-      </div>
+      )}
     </header>
   );
 };

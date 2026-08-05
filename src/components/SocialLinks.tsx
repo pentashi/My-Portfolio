@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { SiGithub, SiLinkedin, SiLeetcode } from 'react-icons/si';
+import { SiGithub, SiLeetcode, SiLinkedin } from 'react-icons/si';
 
 interface SocialLinksProps {
   size?: 'sm' | 'md' | 'lg';
@@ -26,9 +26,9 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ size = 'md' }) => {
   ];
 
   const buttonSize = {
-    sm: { button: 'w-8 h-8', icon: 'h-4 w-4 text-lg' },
-    md: { button: 'w-10 h-10', icon: 'h-5 w-5 text-xl' },
-    lg: { button: 'w-12 h-12', icon: 'h-6 w-6 text-2xl' },
+    sm: { button: 'h-9 w-9', icon: 'text-sm' },
+    md: { button: 'h-10 w-10', icon: 'text-base' },
+    lg: { button: 'h-12 w-12', icon: 'text-lg' },
   }[size];
 
   return (
@@ -38,7 +38,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ size = 'md' }) => {
           key={link.name}
           variant="outline"
           size="icon"
-          className={`${buttonSize.button} rounded-full border-white/20 hover:bg-white/10 hover:border-white/40`}
+          className={`${buttonSize.button} rounded-none border-white/15 bg-transparent text-white/76 hover:bg-white hover:text-black`}
           asChild
         >
           <a href={link.url} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
