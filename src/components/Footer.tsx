@@ -4,17 +4,38 @@ import SocialLinks from './SocialLinks';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-10 px-4 border-t border-white/10">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
-        <div className="text-center md:text-left mb-6 md:mb-0">
-          <h3 className="font-bold text-lg">MBONGWE BRANDON EGBE</h3>
-          <p className="text-sm text-gray-400">Full-Stack Engineer | NestJS · GCP · TypeScript</p>
+    <footer className="py-12 px-4 border-t border-border relative overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Brand */}
+          <div className="text-center md:text-left">
+            <h3 className="font-bold text-2xl text-primary mb-2">MBE</h3>
+            <p className="text-sm text-gray-400 mb-4">Full-Stack Engineer</p>
+            <p className="text-xs text-gray-500">NestJS · Next.js · TypeScript · GCP</p>
+          </div>
+          
+          {/* Location */}
+          <div className="text-center">
+            <h4 className="font-semibold text-white mb-2">Location</h4>
+            <p className="text-sm text-gray-400">Dubai, UAE</p>
+            <p className="text-xs text-gray-500 mt-1">Open to opportunities</p>
+          </div>
+          
+          {/* Connect */}
+          <div className="text-center md:text-right">
+            <h4 className="font-semibold text-white mb-2">Connect</h4>
+            <div className="flex justify-center md:justify-end">
+              <SocialLinks />
+            </div>
+          </div>
         </div>
         
-        <div className="flex flex-col items-center md:items-end">
-          <SocialLinks />
-          <p className="text-sm text-gray-500 mt-4">
-            Built by Mbongwe Brandon Egbe · Dubai, UAE
+        <div className="pt-8 border-t border-border text-center">
+          <p className="text-sm text-gray-500">
+            Built by Mbongwe Brandon Egbe · Dubai, UAE · © {new Date().getFullYear()}
           </p>
         </div>
       </div>

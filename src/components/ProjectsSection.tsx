@@ -106,15 +106,18 @@ const ProjectsSection: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">Projects</h2>
-        <div className="h-1 w-20 bg-primary mb-12"></div>
+    <section id="projects" className="py-24 px-4 relative">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-16 animate-slide-up">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Featured Projects</h2>
+          <div className="section-divider"></div>
+        </div>
 
-        <div className="space-y-12">
+        <div className="space-y-8">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
+              index={index}
               title={project.title}
               description={project.description}
               features={project.features}
@@ -123,6 +126,7 @@ const ProjectsSection: React.FC = () => {
               liveUrl={project.liveUrl}
               githubUrl={project.githubUrl}
               emoji={project.emoji}
+              isReverseLayout={project.isReverseLayout}
             />
           ))}
         </div>

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ExternalLink, Github } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -14,6 +13,7 @@ interface ProjectCardProps {
   liveUrl?: string;
   githubUrl?: string;
   isReverseLayout?: boolean;
+  index?: number;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -25,78 +25,107 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   liveUrl,
   githubUrl,
-  isReverseLayout
+  isReverseLayout,
+  index = 0
 }) => {
+  const animations = ['animate-slide-in-left', 'animate-slide-in-right', 'animate-slide-up'];
+  const animation = animations[index % animations.length];
+
   return (
-    <Card className="bg-secondary border-none overflow-hidden mb-12 animate-scale-in">
-      <div className={`grid grid-cols-1 ${isReverseLayout ? 'lg:grid-cols-[1fr_1.5fr]' : 'lg:grid-cols-[1.5fr_1fr]'} gap-6 min-h-[500px]`}>
+    <div className={`group relative ${animation}`}>
+      <div className="glass-card rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+        <div className={`grid grid-cols-1 ${isReverseLayout ? 'lg:grid-cols-[1fr_1.3fr]' : 'lg:grid-cols-[1.3fr_1fr]'} gap-0 min-h-[450px]`}>
 
-        {/* Text Section */}
-        <div className={`order-2 ${isReverseLayout ? 'lg:order-1' : 'lg:order-2'} flex flex-col justify-center`}>
-          <CardHeader className="flex-shrink-0 text-center">
-            <CardTitle className="text-2xl font-bold flex items-center justify-center gap-2">
-              {title} <span className="text-2xl">{emoji}</span>
-            </CardTitle>
-          </CardHeader>
-
-          {/* Scrollable content */}
-          <CardContent className="flex flex-col overflow-y-auto max-h-[350px] text-center">
-            <CardDescription className="text-lg text-gray-400 mb-4">{description}</CardDescription>
-            <h4 className="font-medium mb-2">Key Features:</h4>
-            <ul className="space-y-2 mb-4">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-start justify-center">
-                  <span className="text-primary mr-2">•</span>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="flex flex-wrap justify-center gap-2">
-              {tags.map((tag, index) => (
-                <Badge key={index} variant="outline" className="border-primary/50 text-gray-300">
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          </CardContent>
-
-          <CardFooter className="flex-shrink-0 justify-center gap-4 mt-4">
-            {liveUrl && (
-              <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-                <Button className="bg-primary hover:bg-primary/80 cta-hover">
-                  Live Demo <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
-            )}
-            {githubUrl && (
-              <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="border-white/20 hover:bg-white/5">
-                  GitHub Repo
-                </Button>
-              </a>
-            )}
-          </CardFooter>
-        </div>
-
-        {/* Image Section */}
-        <div className={`order-1 ${isReverseLayout ? 'lg:order-2' : 'lg:order-1'} p-6 flex items-center justify-center`}>
-          <div className="glass-card rounded-lg overflow-hidden w-full h-full flex items-center justify-center">
+          {/* Image Section */}
+          <div className={`order-1 ${isReverseLayout ? 'lg:order-2' : 'lg:order-1'} relative overflow-hidden bg-black/40`}>
             {image ? (
-              <img
-                src={image}
-                alt={title}
-                className="w-full h-full object-contain hover-scale transition-all duration-300"
-              />
+              <div className="relative w-full h-full min-h-[300px]">
+                <img
+                  src={image}
+                  alt={title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+              </div>
             ) : (
-              <div className="h-60 w-full flex items-center justify-center bg-black/30">
-                <span className="text-6xl">{emoji}</span>
+              <div className="w-full h-full min-h-[300px] flex items-center justify-center bg-gradient-to-br from-primary/10 to-cyan-500/10">
+                <span className="text-8xl opacity-50">{emoji}</span>
               </div>
             )}
           </div>
-        </div>
 
+          {/* Content Section */}
+          <div className={`order-2 ${isReverseLayout ? 'lg:order-1' : 'lg:order-2'} p-8 flex flex-col justify-between`}>
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-4xl">{emoji}</span>
+                <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors duration-300">
+                  {title}
+                </h3>
+              </div>
+
+              <p className="text-gray-300 mb-6 leading-relaxed">{description}</p>
+
+              {features.length > 0 && (
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Key Features</h4>
+                  <ul className="space-y-2">
+                    {features.slice(0, 3).map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-gray-400 text-sm">
+                        <span className="text-primary mt-1 flex-shrink-0">→</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {tags.map((tag, idx) => (
+                  <Badge 
+                    key={idx} 
+                    variant="outline" 
+                    className="border-primary/30 text-gray-300 bg-primary/5 hover:bg-primary/10 transition-colors duration-300"
+                  >
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex gap-3 pt-4 border-t border-border">
+              {liveUrl && (
+                <a 
+                  href={liveUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
+                  <Button className="w-full bg-primary hover:bg-primary/90 cta-hover shadow-lg shadow-primary/25">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Live Demo
+                  </Button>
+                </a>
+              )}
+              {githubUrl && (
+                <a 
+                  href={githubUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                >
+                  <Button variant="outline" className="w-full border-white/20 hover:bg-white/5 hover:border-white/30 transition-all duration-300">
+                    <Github className="mr-2 h-4 w-4" />
+                    GitHub
+                  </Button>
+                </a>
+              )}
+            </div>
+          </div>
+
+        </div>
       </div>
-    </Card>
+    </div>
   );
 };
 
