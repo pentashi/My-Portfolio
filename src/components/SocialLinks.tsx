@@ -15,7 +15,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ size = 'md' }) => {
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/achapi-pentashi',
+      url: 'https://linkedin.com/in/mbongwe-brandon-egbe',
       icon: <SiLinkedin />,
     },
     {
