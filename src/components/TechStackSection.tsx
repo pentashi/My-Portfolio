@@ -15,8 +15,10 @@ import {
   SiNextdotjs,
   SiGit,
   SiGithub,
+  SiLinux,
+  SiNginx,
 } from "react-icons/si";
-import { Database, Cloud, Server, Code, Cpu, Layers } from 'lucide-react';
+import { Database, Cloud, Server, Code, Cpu, Layers, Terminal } from 'lucide-react';
 
 interface TechStackItemProps {
   name: string;
@@ -40,6 +42,9 @@ const technologies: TechStackItemProps[] = [
   { name: 'Terraform', Icon: SiTerraform, category: 'Infrastructure' },
   { name: 'Git', Icon: SiGit, category: 'Tools' },
   { name: 'GitHub', Icon: SiGithub, category: 'Tools' },
+  { name: 'Linux', Icon: SiLinux, category: 'DevOps' },
+  { name: 'Nginx', Icon: SiNginx, category: 'DevOps' },
+  { name: 'CI/CD', Icon: SiGithub, category: 'DevOps' },
 ];
 
 const categories = [
@@ -49,6 +54,7 @@ const categories = [
   { name: 'Cloud', icon: Cloud, color: 'cyan' },
   { name: 'Infrastructure', icon: Layers, color: 'primary' },
   { name: 'Tools', icon: Cpu, color: 'cyan' },
+  { name: 'DevOps', icon: Terminal, color: 'primary' },
 ];
 
 const TechStackItem: React.FC<TechStackItemProps> = ({ name, Icon, category }) => {
@@ -118,11 +124,11 @@ const TechStackSection: React.FC = () => {
         {/* Summary Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="glass-card p-6 rounded-xl text-center animate-scale-in">
-            <div className="text-3xl font-bold text-primary mb-2">15+</div>
+            <div className="text-3xl font-bold text-primary mb-2">18+</div>
             <div className="text-sm text-gray-400">Technologies</div>
           </div>
           <div className="glass-card p-6 rounded-xl text-center animate-scale-in" style={{ animationDelay: '0.1s' }}>
-            <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
+            <div className="text-3xl font-bold text-cyan-400 mb-2">7</div>
             <div className="text-sm text-gray-400">Categories</div>
           </div>
           <div className="glass-card p-6 rounded-xl text-center animate-scale-in" style={{ animationDelay: '0.2s' }}>

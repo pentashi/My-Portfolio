@@ -46,8 +46,8 @@ const AboutSection: React.FC = () => {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 gap-4 pt-6 border-t border-border">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">3+</div>
-                  <div className="text-sm text-gray-400">Enterprise Systems</div>
+                  <div className="text-3xl font-bold text-primary">6+</div>
+                  <div className="text-sm text-gray-400">Production Projects</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">GCP</div>
@@ -89,7 +89,7 @@ const AboutSection: React.FC = () => {
                     <ul className="space-y-2 text-gray-300">
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1">•</span>
-                        <span>Delivered three enterprise-grade backend systems for cross-border logistics firm</span>
+                        <span>Delivered production software across logistics, fleet management, and financial systems for international clients</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1">•</span>

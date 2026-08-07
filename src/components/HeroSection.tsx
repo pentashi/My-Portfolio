@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code2, Database, Cloud, Zap } from 'lucide-react';
+import { Code2, Database, Cloud, Zap } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   return (
@@ -26,8 +26,8 @@ const HeroSection: React.FC = () => {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                <span className="block mb-2">Full-Stack Engineer</span>
-                <span className="text-gradient">Building AI-Driven & Cloud-Native Systems</span>
+                <span className="block mb-2">Software Engineer</span>
+                <span className="text-gradient">Building Production-Ready Backend Systems & Cloud-Native Applications</span>
               </h1>
 
               <div className="flex flex-wrap gap-3 mb-6">
@@ -45,19 +45,45 @@ const HeroSection: React.FC = () => {
                 <Button
                   size="lg"
                   className="bg-primary text-white hover:bg-primary/90 cta-hover shadow-lg shadow-primary/25 px-8 py-4 text-base font-medium rounded-lg transition-all duration-300"
-                  onClick={() => {
-                    const el = document.getElementById('projects');
-                    if (el) {
-                      el.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
                 >
-                  View Projects
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <a
+                    href="https://drive.google.com/file/d/1HbBIV9oczKzwjdm3ZgfmC8JKw5jo62jA/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white"
+                  >
+                    View Resume
+                  </a>
                 </Button>
 
-                <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/5 hover:border-white/30 px-8 py-4 text-base font-medium rounded-lg transition-all duration-300">
-                  <a href="#contact">Contact Me</a>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-white/20 hover:bg-white/5 hover:border-white/30 px-8 py-4 text-base font-medium rounded-lg transition-all duration-300"
+                >
+                  <a
+                    href="https://github.com/pentashi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white"
+                  >
+                    GitHub
+                  </a>
+                </Button>
+
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-white/20 hover:bg-white/5 hover:border-white/30 px-8 py-4 text-base font-medium rounded-lg transition-all duration-300"
+                >
+                  <a
+                    href="https://linkedin.com/in/mbongwe-brandon-egbe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white"
+                  >
+                    LinkedIn
+                  </a>
                 </Button>
               </div>
             </div>
@@ -89,7 +115,9 @@ const HeroSection: React.FC = () => {
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
                   <div className="font-mono text-sm text-gray-300">
-                    <p className="text-primary mb-2">// Current Focus</p>
+                    <p className="text-primary mb-2">// GitHub Stats</p>
+                    <p className="mb-1">const contributions = "1,100+ commits";</p>
+                    <p className="mb-1">const repositories = "70+ repos";</p>
                     <p className="mb-1">const location = "Dubai, UAE";</p>
                     <p className="mb-1">const status = "Open to opportunities";</p>
                     <p className="mb-1">const expertise = [</p>
