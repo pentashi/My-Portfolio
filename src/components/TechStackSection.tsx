@@ -122,7 +122,7 @@ const TechStackSection: React.FC = () => {
         </div>
 
         {/* Summary Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6">
           <div className="glass-card p-6 rounded-xl text-center animate-scale-in">
             <div className="text-3xl font-bold text-primary mb-2">18+</div>
             <div className="text-sm text-gray-400">Technologies</div>
@@ -132,10 +132,6 @@ const TechStackSection: React.FC = () => {
             <div className="text-sm text-gray-400">Categories</div>
           </div>
           <div className="glass-card p-6 rounded-xl text-center animate-scale-in" style={{ animationDelay: '0.2s' }}>
-            <div className="text-3xl font-bold text-primary mb-2">3+</div>
-            <div className="text-sm text-gray-400">Years Exp</div>
-          </div>
-          <div className="glass-card p-6 rounded-xl text-center animate-scale-in" style={{ animationDelay: '0.3s' }}>
             <div className="text-3xl font-bold text-cyan-400 mb-2">GCP</div>
             <div className="text-sm text-gray-400">Certified</div>
           </div>
