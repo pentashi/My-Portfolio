@@ -17,8 +17,14 @@ import {
   SiGithub,
   SiLinux,
   SiNginx,
+  SiSupabase,
+  SiCloudflare,
+  SiStripe,
+  SiPaypal,
+  SiReactquery,
+  SiGithubactions,
 } from "react-icons/si";
-import { Database, Cloud, Server, Code, Cpu, Layers, Terminal } from 'lucide-react';
+import { Database, Cloud, Server, Code, Cpu, Layers, Terminal, CreditCard } from 'lucide-react';
 
 interface TechStackItemProps {
   name: string;
@@ -31,20 +37,25 @@ const technologies: TechStackItemProps[] = [
   { name: 'Next.js', Icon: SiNextdotjs, category: 'Frontend' },
   { name: 'TypeScript', Icon: SiTypescript, category: 'Frontend' },
   { name: 'TailwindCSS', Icon: SiTailwindcss, category: 'Frontend' },
+  { name: 'TanStack', Icon: SiReactquery, category: 'Frontend' },
   { name: 'Node.js', Icon: SiNodedotjs, category: 'Backend' },
   { name: 'Express', Icon: SiExpress, category: 'Backend' },
   { name: 'NestJS', Icon: SiNestjs, category: 'Backend' },
   { name: 'PostgreSQL', Icon: SiPostgresql, category: 'Database' },
+  { name: 'Supabase', Icon: SiSupabase, category: 'Database' },
   { name: 'Redis', Icon: SiRedis, category: 'Database' },
   { name: 'Socket.IO', Icon: SiSocketdotio, category: 'Realtime' },
   { name: 'GCP', Icon: SiGooglecloud, category: 'Cloud' },
+  { name: 'Cloudflare Workers', Icon: SiCloudflare, category: 'Cloud' },
+  { name: 'Stripe', Icon: SiStripe, category: 'Payments' },
+  { name: 'PayPal', Icon: SiPaypal, category: 'Payments' },
   { name: 'Docker', Icon: SiDocker, category: 'Infrastructure' },
   { name: 'Terraform', Icon: SiTerraform, category: 'Infrastructure' },
   { name: 'Git', Icon: SiGit, category: 'Tools' },
   { name: 'GitHub', Icon: SiGithub, category: 'Tools' },
   { name: 'Linux', Icon: SiLinux, category: 'DevOps' },
   { name: 'Nginx', Icon: SiNginx, category: 'DevOps' },
-  { name: 'CI/CD', Icon: SiGithub, category: 'DevOps' },
+  { name: 'GitHub Actions CI/CD', Icon: SiGithubactions, category: 'DevOps' },
 ];
 
 const categories = [
@@ -52,6 +63,7 @@ const categories = [
   { name: 'Backend', icon: Server, color: 'cyan' },
   { name: 'Database', icon: Database, color: 'primary' },
   { name: 'Cloud', icon: Cloud, color: 'cyan' },
+  { name: 'Payments', icon: CreditCard, color: 'primary' },
   { name: 'Infrastructure', icon: Layers, color: 'primary' },
   { name: 'Tools', icon: Cpu, color: 'cyan' },
   { name: 'DevOps', icon: Terminal, color: 'primary' },
@@ -82,7 +94,7 @@ const TechStackSection: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Tech Stack</h2>
           <div className="section-divider"></div>
           <p className="text-lg text-gray-400 mt-6 max-w-2xl">
-            Technologies I use to build scalable, real-time, and production-ready web applications.
+            Technologies I use to build secure, tested web applications and backends.
           </p>
         </div>
 
@@ -124,11 +136,11 @@ const TechStackSection: React.FC = () => {
         {/* Summary Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6">
           <div className="glass-card p-6 rounded-xl text-center animate-scale-in">
-            <div className="text-3xl font-bold text-primary mb-2">18+</div>
+            <div className="text-3xl font-bold text-primary mb-2">{technologies.length}</div>
             <div className="text-sm text-gray-400">Technologies</div>
           </div>
           <div className="glass-card p-6 rounded-xl text-center animate-scale-in" style={{ animationDelay: '0.1s' }}>
-            <div className="text-3xl font-bold text-cyan-400 mb-2">7</div>
+            <div className="text-3xl font-bold text-cyan-400 mb-2">{categories.length}</div>
             <div className="text-sm text-gray-400">Categories</div>
           </div>
           <div className="glass-card p-6 rounded-xl text-center animate-scale-in" style={{ animationDelay: '0.2s' }}>

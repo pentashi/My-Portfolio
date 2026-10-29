@@ -11,7 +11,6 @@ const Navbar: React.FC = () => {
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'Tech Stack', href: '#tech' },
-    { name: 'Collaborate', href: '#collaborate' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -37,15 +36,15 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="relative group">
-          <span className="font-bold text-2xl tracking-wider text-primary group-hover:text-cyan-400 transition-colors duration-300">
+        <a href="#" className="relative group" aria-label="Mbongwe Brandon Egbe, back to top">
+          <span className="font-bold text-2xl tracking-wider text-cyan-300 group-hover:text-cyan-200 transition-colors duration-300">
             MBE
           </span>
           <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></div>
         </a>
 
         {/* Desktop navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav aria-label="Main" className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a 
               key={link.name}

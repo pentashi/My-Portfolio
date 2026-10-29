@@ -21,17 +21,19 @@ const AboutSection: React.FC = () => {
               <h3 className="text-2xl font-bold mb-6 text-gradient">Who I Am</h3>
               
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Full-Stack and Cloud Engineer with proven experience delivering production systems for international clients across logistics, fintech, and cross-border trade.
+                Full-stack engineer based in Dubai. I built and launched NannyLink, a live two-sided marketplace, as its sole engineer, and I build backends for clients in logistics and accounting.
               </p>
               
               <p className="text-gray-400 mb-8 leading-relaxed">
-                I specialize in NestJS, Next.js, TypeScript, and PostgreSQL, with deep backend expertise in event-driven architecture, JWT/RBAC security, and GCP cloud infrastructure. What I care about is building things that survive contact with real users and real cloud bills — cost-aware, secure, and built to scale.
+                I specialize in NestJS, Next.js, TypeScript, and PostgreSQL, plus Supabase, Postgres Row Level Security, payments (Stripe, PayPal) and serverless hosting on Cloudflare and GCP. What I care about is building things that survive contact with real users and real cloud bills: cost-aware, secure, and tested.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
                 <Button className="bg-primary hover:bg-primary/90 cta-hover shadow-lg shadow-primary/25">
                   <a
                     href="https://drive.google.com/file/d/1HbBIV9oczKzwjdm3ZgfmC8JKw5jo62jA/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white"
                   >
                     Download Resume
@@ -46,8 +48,8 @@ const AboutSection: React.FC = () => {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 gap-4 pt-6 border-t border-border">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">6+</div>
-                  <div className="text-sm text-gray-400">Production Projects</div>
+                  <div className="text-3xl font-bold text-primary">76</div>
+                  <div className="text-sm text-gray-400">Automated tests on NannyLink</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">GCP</div>
@@ -83,21 +85,22 @@ const AboutSection: React.FC = () => {
                     <Building2 className="w-6 h-6 text-primary" />
                   </div>
                   <div className="flex-1">
+                    {/* TODO(verify): confirm title, company name and dates for the AMSIT & AMSI Group work. */}
                     <h4 className="text-lg font-bold text-white">Independent Software Consultant</h4>
                     <p className="text-primary mb-2">AMSIT & AMSI Group</p>
                     <p className="text-sm text-gray-400 mb-3">Jul 2024 – Present | China · Cameroon · Gabon · Remote</p>
                     <ul className="space-y-2 text-gray-300">
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1">•</span>
-                        <span>Delivered production software across logistics, fleet management, and financial systems for international clients</span>
+                        <span>Building backend software for clients in logistics, fleet management and accounting</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1">•</span>
-                        <span>CargoLink: Event-driven NestJS APIs managing 1,200+ GPS updates/minute</span>
+                        <span>CargoLink: event-driven NestJS APIs for real-time shipment tracking (deployment in progress)</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1">•</span>
-                        <span>AutoPartage: Fleet management with 40% reduction in reporting latency</span>
+                        <span>AutoPartage: fleet and rent-to-own rental management app</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1">•</span>
@@ -120,11 +123,11 @@ const AboutSection: React.FC = () => {
                     <ul className="space-y-2 text-gray-300">
                       <li className="flex items-start gap-2">
                         <span className="text-cyan-400 mt-1">•</span>
-                        <span>Contributed to internal recruitment platform used across teams</span>
+                        <span>Worked on an internal recruitment platform</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-cyan-400 mt-1">•</span>
-                        <span>Implemented unit tests, reducing frontend bugs by ~20%</span>
+                        <span>Wrote unit tests for frontend features</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-cyan-400 mt-1">•</span>

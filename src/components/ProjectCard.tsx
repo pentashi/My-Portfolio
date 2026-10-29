@@ -42,7 +42,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <div className="relative w-full h-full min-h-[300px]">
                 <img
                   src={image}
-                  alt={title}
+                  alt={`Screenshot of ${title}`}
+                  loading="lazy"
+                  decoding="async"
+                  width={1280}
+                  height={800}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
@@ -70,7 +74,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Key Features</h4>
                   <ul className="space-y-2">
-                    {features.slice(0, 3).map((feature, idx) => (
+                    {features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-gray-400 text-sm">
                         <span className="text-primary mt-1 flex-shrink-0">→</span>
                         <span>{feature}</span>

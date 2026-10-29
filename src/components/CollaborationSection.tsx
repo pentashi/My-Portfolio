@@ -19,7 +19,7 @@ const CollaborationSection: React.FC = () => {
           <div className="relative z-10">
             <div className="text-center mb-12 animate-slide-up">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-                Open to <span className="text-gradient">Collaborate</span>
+                Open to <span className="text-gradient">New Roles</span>
               </h2>
               <div className="section-divider mx-auto"></div>
             </div>
@@ -52,7 +52,7 @@ const CollaborationSection: React.FC = () => {
 
             <div className="text-center animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                Actively seeking full-stack or backend engineering roles in Dubai and the wider UAE. 
+                Actively seeking full-stack or backend engineering roles in Dubai, the wider UAE, and remote.
                 Open to onsite, hybrid, or remote arrangements.
               </p>
 
