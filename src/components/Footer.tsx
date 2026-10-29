@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div className="text-center md:text-left">
-            <h3 className="font-bold text-2xl text-primary mb-2">MBE</h3>
+            <p className="font-bold text-2xl text-cyan-300 mb-2">MBE</p>
             <p className="text-sm text-gray-400 mb-4">Full-Stack Engineer</p>
-            <p className="text-xs text-gray-500">NestJS · Next.js · TypeScript · GCP</p>
+            <p className="text-xs text-gray-500">TypeScript · NestJS · Supabase · PostgreSQL · GCP</p>
           </div>
           
           {/* Location */}

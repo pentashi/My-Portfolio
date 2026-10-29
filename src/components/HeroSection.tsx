@@ -1,142 +1,117 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Code2, Database, Cloud, Zap } from 'lucide-react';
+import { ExternalLink, FileText, Github } from 'lucide-react';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
+
+const RESUME_URL = "https://drive.google.com/file/d/1HbBIV9oczKzwjdm3ZgfmC8JKw5jo62jA/view?usp=sharing";
+
+const nannyLinkHighlights = [
+  "Postgres Row Level Security keeps nanny contact details private until a family pays or is granted access",
+  "Stripe and PayPal checkout with repeat-safe fulfillment, duplicate-charge prevention and signed webhooks",
+  "Admin console to review, approve and suspend nanny profiles",
+  "76 automated end-to-end and security tests run in GitHub Actions CI",
+];
+
+const nannyLinkStack = ["TypeScript", "React", "TanStack Start", "Supabase", "Cloudflare Workers", "Stripe", "PayPal"];
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="min-h-screen relative overflow-hidden flex items-center px-4 py-16 md:py-24">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-background"></div>
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-slow"></div>
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-      
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 opacity-5" style={{
+    <section aria-labelledby="hero-heading" className="min-h-screen relative overflow-hidden flex items-center px-4 pt-28 pb-16 md:pt-32 md:pb-24">
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-background"></div>
+      <div aria-hidden="true" className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl motion-safe:animate-pulse-slow"></div>
+      <div aria-hidden="true" className="absolute bottom-20 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl motion-safe:animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+
+      <div aria-hidden="true" className="absolute inset-0 opacity-5" style={{
         backgroundImage: 'linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)',
         backgroundSize: '50px 50px'
       }}></div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left Content */}
-          <div className="lg:col-span-7 animate-slide-in-left">
-            <div className="mb-6">
-              <div className="inline-block px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-6">
-                <span className="text-primary text-sm font-medium tracking-wide">MBONGWE BRANDON EGBE</span>
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-6 motion-safe:animate-slide-in-left">
+            <div className="inline-block px-4 py-2 rounded-full border border-cyan-300/40 bg-cyan-300/10 mb-6">
+              <span className="text-cyan-100 text-sm font-medium tracking-wide">Mbongwe Brandon Egbe</span>
+            </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                <span className="block mb-2">Software Engineer</span>
-                <span className="text-gradient">Building Production-Ready Backend Systems & Cloud-Native Applications</span>
-              </h1>
+            <h1 id="hero-heading" className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white">
+              Full-stack engineer building and <span className="text-gradient">shipping production backends</span>
+            </h1>
 
-              <div className="flex flex-wrap gap-3 mb-6">
-                <span className="px-3 py-1 rounded-lg bg-secondary/50 border border-border text-sm text-gray-300">NestJS</span>
-                <span className="px-3 py-1 rounded-lg bg-secondary/50 border border-border text-sm text-gray-300">Next.js</span>
-                <span className="px-3 py-1 rounded-lg bg-secondary/50 border border-border text-sm text-gray-300">TypeScript</span>
-                <span className="px-3 py-1 rounded-lg bg-secondary/50 border border-border text-sm text-gray-300">GCP ACE</span>
-              </div>
+            <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-4 leading-relaxed">
+              I designed, built and launched NannyLink on my own: a live marketplace with Stripe and PayPal payments, database-level security and 76 automated tests in CI.
+            </p>
 
-              <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-8 leading-relaxed">
-                I build production-grade backend systems and cloud-native applications. Delivered enterprise systems across logistics, fintech, and cross-border trade for international clients. Currently based in Dubai.
-              </p>
+            <p className="text-base text-gray-300 mb-6">
+              Based in Dubai. Open to full-stack and backend roles in the UAE and remote.
+            </p>
 
-              <div className="flex flex-wrap gap-4">
-                <Button
-                  size="lg"
-                  className="bg-primary text-white hover:bg-primary/90 cta-hover shadow-lg shadow-primary/25 px-8 py-4 text-base font-medium rounded-lg transition-all duration-300"
-                >
-                  <a
-                    href="https://drive.google.com/file/d/1HbBIV9oczKzwjdm3ZgfmC8JKw5jo62jA/view?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white"
-                  >
-                    View Resume
-                  </a>
-                </Button>
+            <ul aria-label="Core stack" className="flex flex-wrap gap-2 mb-8">
+              {["TypeScript", "NestJS", "Next.js", "PostgreSQL", "Supabase", "GCP (ACE certified)"].map((tag) => (
+                <li key={tag} className="px-3 py-1 rounded-lg bg-secondary/60 border border-border text-sm text-gray-200">{tag}</li>
+              ))}
+            </ul>
 
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-white/20 hover:bg-white/5 hover:border-white/30 px-8 py-4 text-base font-medium rounded-lg transition-all duration-300"
-                >
-                  <a
-                    href="https://github.com/pentashi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white"
-                  >
-                    GitHub
-                  </a>
-                </Button>
+            <div className="flex flex-wrap items-center gap-4">
+              <Button asChild size="lg" className="bg-cyan-700 text-white hover:bg-cyan-600 shadow-lg shadow-primary/25 px-6 text-base font-medium rounded-lg">
+                <a href="https://joinnannylink.com" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-4 w-4" aria-hidden="true" />
+                  View NannyLink (live)
+                </a>
+              </Button>
 
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-white/20 hover:bg-white/5 hover:border-white/30 px-8 py-4 text-base font-medium rounded-lg transition-all duration-300"
-                >
-                  <a
-                    href="https://linkedin.com/in/mbongwe-brandon-egbe"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white"
-                  >
-                    LinkedIn
-                  </a>
-                </Button>
+              <Button asChild size="lg" variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white px-6 text-base font-medium rounded-lg">
+                <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
+                  <FileText className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Resume
+                </a>
+              </Button>
+
+              <div className="flex items-center gap-2">
+                <a href="https://github.com/pentashi" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="p-3 rounded-lg border border-white/20 text-gray-200 hover:text-white hover:bg-white/10 transition-colors">
+                  <SiGithub className="h-5 w-5" aria-hidden="true" />
+                </a>
+                <a href="https://linkedin.com/in/mbongwe-brandon-egbe" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="p-3 rounded-lg border border-white/20 text-gray-200 hover:text-white hover:bg-white/10 transition-colors">
+                  <SiLinkedin className="h-5 w-5" aria-hidden="true" />
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Right Visual Elements */}
-          <div className="lg:col-span-5 relative animate-slide-in-right">
-            <div className="relative">
-              {/* Floating Icons */}
-              <div className="absolute -top-10 -left-10 p-4 glass-card rounded-xl animate-float">
-                <Code2 className="w-8 h-8 text-primary" />
-              </div>
-              <div className="absolute top-20 -right-8 p-4 glass-card rounded-xl animate-float" style={{ animationDelay: '1s' }}>
-                <Database className="w-8 h-8 text-cyan-400" />
-              </div>
-              <div className="absolute bottom-20 -left-6 p-4 glass-card rounded-xl animate-float" style={{ animationDelay: '2s' }}>
-                <Cloud className="w-8 h-8 text-primary" />
-              </div>
-              <div className="absolute -bottom-8 right-20 p-4 glass-card rounded-xl animate-float" style={{ animationDelay: '3s' }}>
-                <Zap className="w-8 h-8 text-cyan-400" />
-              </div>
+          <article aria-labelledby="featured-project-heading" className="lg:col-span-6 glass-card p-6 md:p-8 rounded-2xl motion-safe:animate-slide-in-right">
+            <p className="text-xs font-semibold uppercase tracking-wider text-cyan-200 mb-2">Featured project · Live in production</p>
+            <h2 id="featured-project-heading" className="text-2xl md:text-3xl font-bold text-white mb-2">NannyLink</h2>
+            <p className="text-gray-300 mb-5">A global nanny marketplace I built solo, from idea to launch.</p>
 
-              {/* Central Card */}
-              <div className="glass-card p-8 rounded-2xl relative z-10">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  </div>
-                  <div className="font-mono text-sm text-gray-300">
-                    <p className="text-primary mb-2">// GitHub Stats</p>
-                    <p className="mb-1">const contributions = "1,100+ commits";</p>
-                    <p className="mb-1">const repositories = "70+ repos";</p>
-                    <p className="mb-1">const location = "Dubai, UAE";</p>
-                    <p className="mb-1">const status = "Open to opportunities";</p>
-                    <p className="mb-1">const expertise = [</p>
-                    <p className="pl-4">"Backend Systems",</p>
-                    <p className="pl-4">"Cloud Architecture",</p>
-                    <p className="pl-4">"Enterprise Solutions"</p>
-                    <p>];</p>
-                  </div>
-                </div>
-              </div>
+            <ul className="space-y-3 mb-6">
+              {nannyLinkHighlights.map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-gray-200">
+                  <span className="text-primary mt-0.5 flex-shrink-0" aria-hidden="true">→</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <ul aria-label="NannyLink stack" className="flex flex-wrap gap-2 mb-6">
+              {nannyLinkStack.map((tag) => (
+                <li key={tag} className="px-2.5 py-1 rounded-md border border-primary/30 bg-primary/5 text-xs text-gray-200">{tag}</li>
+              ))}
+            </ul>
+
+            <div className="flex flex-wrap gap-3 pt-4 border-t border-border">
+              <Button asChild className="flex-1 bg-cyan-700 text-white hover:bg-cyan-600">
+                <a href="https://joinnannylink.com" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Live site
+                </a>
+              </Button>
+              <Button asChild variant="outline" className="flex-1 border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white">
+                <a href="https://github.com/pentashi/nanny-link-care" target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Code
+                </a>
+              </Button>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex justify-center items-start p-1">
-          <div className="w-1 h-2 bg-white/70 rounded-full"></div>
+          </article>
         </div>
       </div>
     </section>

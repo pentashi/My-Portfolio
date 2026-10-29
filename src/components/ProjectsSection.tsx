@@ -4,15 +4,31 @@ import ProjectCard from './ProjectCard';
 const ProjectsSection: React.FC = () => {
   const projects = [
     {
-      title: "CargoLink — Logistics Backend & Real-Time Tracking API",
+      title: "NannyLink — Global Nanny Marketplace",
       description:
-        "Production-grade backend system for a logistics platform supporting order management, real-time tracking, analytics, and secure role-based access.",
+        "A two-sided marketplace where families worldwide find vetted nannies, live at joinnannylink.com. Families pay a one-time fee to unlock a nanny's contact details or book a concierge matching service, and an admin team reviews every profile before it goes live. Designed, built and launched solo as founder and sole engineer.",
       features: [
-        "Architected event-driven NestJS APIs managing 1,200+ real-time GPS state updates/minute with sub-second synchronization",
+        "Postgres Row Level Security so private nanny contact details only reach families who paid, were gifted access by an admin, or were matched through concierge",
+        "Stripe Checkout and PayPal Orders behind one checkout API, with repeat-safe fulfillment, duplicate-checkout prevention, signed webhooks and correct pricing in zero-, two- and three-decimal currencies",
+        "76 automated end-to-end and security tests against a local Supabase stack, run in GitHub Actions CI on every PR",
+        "Admin console for nanny review, family management, payment search with CSV export, and concierge requests",
+        "Status email alerts via database triggers, pg_net and an Edge Function, with a deduplicated retry queue on pg_cron"
+      ],
+      tags: ["TypeScript", "React", "TanStack Start", "Tailwind CSS", "Supabase", "PostgreSQL", "Stripe", "PayPal", "Resend", "Cloudflare Workers", "GitHub Actions"],
+      image: "/nannylink.png",
+      liveUrl: "https://joinnannylink.com",
+      githubUrl: "https://github.com/pentashi/nanny-link-care",
+      isReverseLayout: false,
+      emoji: "👶"
+    },
+    {
+      title: "CargoLink — Logistics Backend & Tracking API (Client Project)",
+      description:
+        "Backend for a client's logistics platform covering order management, shipment tracking, analytics and role-based access. Deployment to production is in progress.",
+      features: [
+        "Event-driven NestJS APIs with Socket.IO for real-time shipment and GPS updates",
         "JWT authentication with role-based access control",
-        "Real-time shipment updates and analytics for logistics operations",
-        "Comprehensive API documentation using Swagger",
-        "Secure, production-ready backend architecture"
+        "API documentation with Swagger"
       ],
       tags: ["NestJS", "PostgreSQL", "Socket.IO", "JWT", "Swagger", "TypeScript"],
       image: "https://i.ibb.co/spXh2HRg/cargolinkdoc.png",
@@ -22,15 +38,14 @@ const ProjectsSection: React.FC = () => {
       emoji: "🚚"
     },
     {
-      title: "AutoPartage Gabon — Enterprise Fleet Analytics Engine",
+      title: "AutoPartage Gabon — Fleet Rental Management (Client Project)",
       description:
-        "A multi-tenant fleet and rental management ecosystem engineered to process complex rent-to-own lifecycles. Built with an optimized UI state machine to prevent data race conditions and integrated with automated, serverless infrastructure health checks for continuous application uptime.",
+        // TODO(verify): confirm AutoPartage was client work and whether it is used in production.
+        "A multi-tenant fleet and rental management app for rent-to-own vehicle contracts, with an analytics dashboard and automated health checks.",
       features: [
-        "Interactive analytics dashboard managing real-time vehicle metrics and fleet utilization",
-        "Asynchronous remote state architecture handling complex rent-to-own operational data rules",
-        "PostgreSQL optimization achieving a 40% reduction in reporting latency",
-        "Automated continuous integration and deployment profiles containerized via Cloud Run",
-        "Custom external monitoring cron endpoints providing zero unnotified system pauses"
+        "Analytics dashboard for vehicle metrics and fleet utilization",
+        "Rent-to-own contract rules handled in a typed Express + Prisma backend",
+        "Docker images deployed to Cloud Run through GitHub Actions"
       ],
       tags: ["Next.js", "React", "TypeScript", "Express", "Prisma ORM", "PostgreSQL", "GCP", "Docker", "GitHub Actions"],
       image: "/autopartage.png",
@@ -40,15 +55,13 @@ const ProjectsSection: React.FC = () => {
       emoji: "🚗"
     },
     {
-      title: "CEMAC Accounting Backend",
+      title: "CEMAC Accounting Backend (Client Project)",
       description:
-        "A modular, production-grade backend for CEMAC-compliant accounting management, built with NestJS, TypeORM, and PostgreSQL. Designed for enterprise use, with a focus on security, auditability, and extensibility.",
+        "A modular backend for CEMAC-compliant accounting, built with NestJS, TypeORM and PostgreSQL, with a focus on security, auditability and extensibility.",
       features: [
-        "Secure JWT authentication with RBAC (admin/user roles)",
-        "Modular architecture: invoices, partners, accounting, reporting, audit, notifications",
-        "Comprehensive audit logging (login, CRUD, exports)",
-        "Real-time report streaming and secure financial workflows",
-        "Export/import for invoices, accounting entries, and partners (PDF, Excel, CSV)"
+        "JWT authentication with role-based access (admin/user)",
+        "Modules for invoices, partners, accounting, reporting, audit and notifications",
+        "Audit logging plus PDF, Excel and CSV export/import"
       ],
       tags: ["NestJS", "TypeORM", "PostgreSQL", "JWT", "Swagger", "TypeScript"],
       image: "/cemac-accounting-swagger.png",
@@ -58,37 +71,19 @@ const ProjectsSection: React.FC = () => {
       emoji: "📊"
     },
     {
-      title: "NannyLink — Caregiver Matching Platform",
+      title: "ReceiptVault — Expense Tracking App (Personal Project)",
       description:
-        "Pay-per-unlock caregiver marketplace built for the UAE and global market. Parents pay once to unlock a verified caregiver's contact. Features Stripe webhook payment processing, dual-role JWT authentication (parent/caregiver), GCS signed-URL video uploads, and an automated admin verification queue.",
+        "A personal project that automates expense tracking for UAE businesses: receipts are parsed with Google Cloud Document AI, stored in Cloud Storage, and tracked with 5% VAT and AED rules in a bilingual, RTL-ready interface.",
       features: [
-        "Pay-per-unlock caregiver marketplace for UAE and global users",
-        "Stripe webhook payment processing and verification workflows",
-        "Dual-role JWT authentication for parents and caregivers",
-        "GCS signed-URL video uploads and secure media handling",
-        "Automated admin verification queue for caregiver approvals"
-      ],
-      tags: ["NestJS", "Next.js", "TypeScript", "PostgreSQL", "Stripe", "GCP"],
-      githubUrl: "https://github.com/pentashi/nanny-link.git",
-      isReverseLayout: false,
-      emoji: "👶"
-    },
-    {
-      title: "ReceiptVault — Enterprise Expense Management Platform",
-      description:
-        "A cloud-native, production-grade fintech SaaS platform built on a scalable Google Cloud Platform (GCP) microservices architecture. It automates expense tracking for UAE enterprises by leveraging Google Cloud Document AI for advanced field extraction and GCS for secure storage. Fully containerized with Docker, configured via automated Cloud Build CI/CD pipelines, and deployed to serverless runtimes for horizontal scalability and UAE compliance.",
-      features: [
-        "Enterprise AI OCR: Standardized on Google Cloud Document AI (Expense Processor) to automate high-accuracy parsing of merchant names, line items, and transaction metadata.",
-        "Cloud Architecture: Developed an asynchronous pipeline storing media securely in Google Cloud Storage (GCS) and tracking structured relational states.",
-        "Automated DevSecOps: Integrated secure authentication flows and orchestrated end-to-end continuous deployment using GCP Cloud Build CI/CD pipelines.",
-        "UAE Regulatory Framework: Engineered natively for Dubai businesses with full 5% VAT tracking, AED processing rules, and a bilingual, RTL-ready interface.",
-        "Scalable Back-to-Front Stack: Built with a highly responsive React 18 / TypeScript frontend and a stateless Flask backend optimized for deployment over serverless infrastructure."
+        "Receipt field extraction with Google Cloud Document AI (Expense Processor)",
+        "Media stored in Google Cloud Storage with structured records in PostgreSQL",
+        "Containerized React + Flask app deployed through Cloud Build to Cloud Run"
       ],
       tags: ["React", "TypeScript", "Python", "Flask", "GCP", "Document AI", "GCS", "Cloud Build", "PostgreSQL", "Docker"],
       image: "/receiptvault-demo.png",
       liveUrl: "https://receiptvault-frontend-210041012141.me-central1.run.app/",
       githubUrl: "https://github.com/pentashi/Receipt-vault",
-      isReverseLayout: true,
+      isReverseLayout: false,
       emoji: "🧾"
     },
     {
