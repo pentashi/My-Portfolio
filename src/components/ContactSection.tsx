@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Send, MessageSquare } from 'lucide-react';
 import emailjs from 'emailjs-com';
 import SocialLinks from './SocialLinks';
+import SectionHeading from './SectionHeading';
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -54,20 +55,18 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 relative overflow-hidden">
+    <section id="contact" aria-labelledby="contact-heading" className="py-24 px-4 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background"></div>
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Get In Touch</h2>
-          <div className="section-divider"></div>
-          <p className="text-lg text-gray-400 mt-6 max-w-2xl">
-            Ready to collaborate or want to know more about my projects?
-            I'm always open to discussing new opportunities and ideas.
-          </p>
-        </div>
+        <SectionHeading
+          id="contact-heading"
+          eyebrow="Contact"
+          title="Get in touch"
+          description="Hiring for a full-stack or backend role, or want a walkthrough of one of these projects? Send me a message."
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info */}
@@ -112,9 +111,9 @@ const ContactSection: React.FC = () => {
             </div>
 
             <div className="glass-card p-6 rounded-xl bg-gradient-to-br from-primary/10 to-cyan-500/10 border-primary/20">
-              <h3 className="text-xl font-bold text-white mb-3">Current Status</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Availability</h3>
               <p className="text-gray-300">
-                Actively looking for full-stack and backend engineering opportunities in Dubai and internationally.
+                Looking for full-stack and backend engineering roles in Dubai, the wider UAE and remote.
               </p>
               <div className="mt-4 flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
@@ -134,7 +133,7 @@ const ContactSection: React.FC = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="John Doe"
+                    placeholder="Your name"
                     required
                     className="w-full p-4 rounded-lg bg-secondary/50 border border-border text-white placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-300"
                   />
@@ -147,7 +146,7 @@ const ContactSection: React.FC = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@example.com"
+                    placeholder="you@company.com"
                     required
                     className="w-full p-4 rounded-lg bg-secondary/50 border border-border text-white placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-300"
                   />
@@ -159,7 +158,7 @@ const ContactSection: React.FC = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell me about your project or opportunity..."
+                    placeholder="Tell me about the role or project..."
                     required
                     rows={5}
                     className="w-full p-4 rounded-lg bg-secondary/50 border border-border text-white placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-300 resize-none"
@@ -169,7 +168,7 @@ const ContactSection: React.FC = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-primary hover:bg-primary/90 cta-hover shadow-lg shadow-primary/25"
+                  className="w-full bg-cyan-300 text-background hover:bg-cyan-200 font-semibold"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
