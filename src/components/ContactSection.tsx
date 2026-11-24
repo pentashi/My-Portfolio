@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Mail, MapPin, Send, MessageSquare } from 'lucide-react';
-import emailjs from 'emailjs-com';
+import { Mail, MapPin, MessageSquare } from 'lucide-react';
+import { SiWhatsapp } from 'react-icons/si';
 import SocialLinks from './SocialLinks';
 import SectionHeading from './SectionHeading';
 
+const WHATSAPP_NUMBER = '971542021940';
+
 const ContactSection: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-  const [status, setStatus] = useState<string>('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({ name: '', message: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -21,37 +17,8 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('');
-    setIsSubmitting(true);
-
-    emailjs
-      .sendForm(
-        'service_eytztnv',
-        'template_gipaxht',
-        e.target as HTMLFormElement,
-        'UVxiOGUEfnTk4xIN8'
-      )
-      .then(
-        (result) => {
-          console.log('Email sent successfully:', result.text);
-          setStatus('Your message has been sent successfully!');
-          setFormData({ name: '', email: '', message: '' });
-          setIsSubmitting(false);
-
-          setTimeout(() => {
-            setStatus('');
-          }, 5000);
-        },
-        (error) => {
-          console.log('Error sending email:', error.text);
-          setStatus('Oops! Something went wrong. Please try again later.');
-          setIsSubmitting(false);
-
-          setTimeout(() => {
-            setStatus('');
-          }, 5000);
-        }
-      );
+    const text = `Hi Brandon, I'm ${formData.name.trim()}.\n\n${formData.message.trim()}`;
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -78,7 +45,19 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">Email</h3>
-                  <p className="text-gray-300">mbongweegbe@gmail.com</p>
+                  <a href="mailto:mbongweegbe@gmail.com" className="text-gray-300 hover:text-cyan-300">mbongweegbe@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div className="glass-card p-6 rounded-xl hover:border-primary/30 transition-colors duration-300">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-[#25D366]/10">
+                  <SiWhatsapp className="w-6 h-6 text-[#25D366]" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-1">WhatsApp</h3>
+                  <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-300">+971 54 202 1940</a>
                 </div>
               </div>
             </div>
@@ -140,19 +119,6 @@ const ContactSection: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="you@company.com"
-                    required
-                    className="w-full p-4 rounded-lg bg-secondary/50 border border-border text-white placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-300"
-                  />
-                </div>
-
-                <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
                   <textarea
                     name="message"
@@ -165,34 +131,11 @@ const ContactSection: React.FC = () => {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  className="w-full bg-cyan-300 text-background hover:bg-cyan-200 font-semibold"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <span className="animate-spin mr-2">⏳</span>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      Send Message
-                      <Send className="ml-2 h-4 w-4" />
-                    </>
-                  )}
+                <Button type="submit" size="lg" className="w-full bg-[#25D366] text-[#0b1118] hover:bg-[#3ee07a] font-semibold">
+                  <SiWhatsapp className="mr-2 h-5 w-5" aria-hidden="true" />
+                  Send on WhatsApp
                 </Button>
-
-                {status && (
-                  <div className={`text-center p-3 rounded-lg ${
-                    status.includes('success') 
-                      ? 'bg-green-500/10 text-green-400 border border-green-500/20' 
-                      : 'bg-red-500/10 text-red-400 border border-red-500/20'
-                  }`}>
-                    {status}
-                  </div>
-                )}
+                <p className="text-center text-xs text-gray-500">Opens WhatsApp with your message ready to send.</p>
               </div>
             </form>
           </div>
