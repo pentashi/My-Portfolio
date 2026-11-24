@@ -1,11 +1,8 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
+import WorkSection from '@/components/WorkSection';
 import AboutSection from '@/components/AboutSection';
-import ProjectsSection from '@/components/ProjectsSection';
-import TechStackSection from '@/components/TechStackSection';
-import CollaborationSection from '@/components/CollaborationSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -15,10 +12,8 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <WorkSection />
         <AboutSection />
-        <ProjectsSection />
-        <TechStackSection />
-        <CollaborationSection />
         <ContactSection />
       </main>
       <Footer />
